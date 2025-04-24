@@ -15,5 +15,6 @@ public:
 	Story* getNextPart() const;
 	void setDescription(string dsc);
 	void setNextPart(Story* NxtPrt);
+	
 };
 

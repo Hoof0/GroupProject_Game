@@ -1,6 +1,7 @@
 #include "Story.h"
 #include <conio.h>
 #include <iostream>
+#include "Choices.h"
 
 
 void Story::setNaration(string Nar)
@@ -31,7 +32,9 @@ void Story::display(string Nar, vector<Choices> choice)
 	}
 
 	cout << "What will you do" << endl;
-	for ()
+	for (size_t i = 0; i < choice.size(); i++) {
+		cout << i + 1 << ". " << choice[i].getDescription() << endl;
+	}
 }
 
 
