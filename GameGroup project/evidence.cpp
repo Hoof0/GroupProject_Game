@@ -17,6 +17,3 @@ void evidence::setName(string n) {
 void evidence::setDescription(string d) {
     description = d;
 }
-
-void evidence::operator + (const evidence &right) {
-}

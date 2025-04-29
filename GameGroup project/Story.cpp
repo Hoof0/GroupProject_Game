@@ -43,16 +43,23 @@ Story Story::GetKeyPress()
 	char KeyPress;
 	int NumPress;
 	bool Valid = false;
+	int playerChoice = 0;
 
-	while (Valid = false) {
+
+	while (Valid == false) {
 		KeyPress = _getch();
 		NumPress = KeyPress;
 
-		if (NumPress >= 1 && NumPress <= 3) {
+		if (NumPress >= 1 && NumPress <= Choiceses.size()) {
 			Valid = true;
+			playerChoice = NumPress;
 			cout << NumPress << endl;
-			
+			break;
+		}
+		else {
+			cout << "Invalid choice. Please choose between 1 and " << Choiceses.size() << "." << endl;
 		}
 	}
-}
 
+	return *Choiceses[playerChoice - 1].getNextPart();
+}

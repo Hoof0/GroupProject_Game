@@ -3,12 +3,12 @@
 
 void Choices::setDescription(string dsc)
 {
-	dsc = Description;
+	Description = dsc;
 }
 
 void Choices::setNextPart(Story* NxtPrt)
 {
-	NxtPrt = NextPart;
+	NextPart = NxtPrt;
 }
 
 string Choices::getDescription() const {
@@ -18,4 +18,3 @@ string Choices::getDescription() const {
 Story* Choices::getNextPart() const {
 	return NextPart;
 }
-

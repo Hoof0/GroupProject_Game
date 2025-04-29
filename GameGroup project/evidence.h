@@ -14,5 +14,4 @@ public:
     string getDescription() const;
     void setName(string n);
     void setDescription(string d);
-    void operator + (const evidence &right);
 };
