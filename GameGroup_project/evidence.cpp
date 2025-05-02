@@ -2,18 +2,19 @@
 #include <iostream>
 
 
-string evidence::getName() const {
+string evidence::getName() const{
     return name;
 }
 
-string evidence::getDescription() const {
-    return description;
+int evidence::getIDnumber() const{
+    return idNumber;
 }
 
-void evidence::setName(string n) {
+void evidence::setName(string n){
     name = n;
 }
 
-void evidence::setDescription(string d) {
-    description = d;
+void evidence::setIDnumber(int ID){
+    idNumber = ID;
 }
+

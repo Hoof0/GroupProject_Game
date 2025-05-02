@@ -1,17 +1,15 @@
 #pragma once
 #include <string>
+#include "StoryElement.h"
 using namespace std;
-class evidence {
+class evidence:public StoryElement {
 private:
     string name;
-    string description;
+    int idNumber;
 public:
-    evidence(string n = "", string d = ""){
-        name = n;
-        description = d;
-    }
+    evidence() = default;
     string getName() const;
-    string getDescription() const;
+    int getIDnumber() const;
     void setName(string n);
-    void setDescription(string d);
+    void setIDnumber(int ID);
 };

@@ -4,19 +4,18 @@
 #include "Choices.h"
 
 
-void Story::setNaration(string Nar)
-{
-	Nar = Naration;
+Story::Story(string text, vector<Choices> ch, bool end = false):StoryElement(text), ending(end){
+
 }
 
 bool Story::getEnding() const
 {
-	return Ending;
+	return ending;
 }
 
-void Story::setEnding(bool End)
+void Story::setEnding(bool end)
 {
-	End = Ending;
+	end = ending;
 }
 
 const vector<Choices>& Story::getChoiceses() const
@@ -24,16 +23,16 @@ const vector<Choices>& Story::getChoiceses() const
 	return Choiceses;
 }
 
-void Story::display(string Nar, vector<Choices> choice)
+void Story::display(string nar, vector<Choices> ch)
 {
-	if (Ending = true) {
+	if (ending = true) {
 		cout << "--THE END--" << endl;
 		return;
 	}
 
 	cout << "What will you do" << endl;
-	for (size_t i = 0; i < choice.size(); i++) {
-		cout << i + 1 << ". " << choice[i].getDescription() << endl;
+	for (size_t i = 0; i < ch.size(); i++) {
+		cout << i + 1 << ". " << ch[i].getDescription() << endl;
 	}
 }
 
@@ -61,5 +60,5 @@ Story Story::GetKeyPress()
 		}
 	}
 
-	return *Choiceses[playerChoice - 1].getNextPart();
+	return *Choiceses[playerChoice - 1].getNextStory();
 }

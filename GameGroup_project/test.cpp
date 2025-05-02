@@ -1,5 +1,6 @@
 #include <iostream>
 #include "evidence.h"
+#include "Story.h"
 #include <string>
 using namespace std;
 
@@ -7,6 +8,9 @@ int main() {
     evidence* e1 = new evidence;
     evidence* e2 = new evidence;
     evidence* e3 = new evidence;
+
+    Story* part1 = new Story;
+    part1->setNaration("It's a sunny day");
     e1->setName("Bob");
     e2->setName("Bob like men");
     string a = e1->getName();

@@ -1,20 +1,10 @@
 #include "Choices.h"
 
 
-void Choices::setDescription(string dsc)
-{
-	Description = dsc;
+Story* Choices::getNextStory() const {
+	return nextStory;
 }
 
-void Choices::setNextPart(Story* NxtPrt)
-{
-	NextPart = NxtPrt;
-}
-
-string Choices::getDescription() const {
-	return Description;
-}
-
-Story* Choices::getNextPart() const {
-	return NextPart;
+Choices::Choices(const string dsc, Story* next):StoryElement(dsc), nextStory(next) {
+	nextStory = next;
 }

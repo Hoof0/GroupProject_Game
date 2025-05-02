@@ -1,20 +1,16 @@
 #pragma once
 #include <string>
-#include "Story.h"
+#include "StoryElement.h"
 using namespace std;
 
-class Choices
+class Story;
+
+class Choices:public StoryElement
 {
 private:
-	string Description;
-	Story* NextPart;
+	Story* nextStory;
 public:
-	Choices(const string dsc, Story* NxtPrt) {
-	};
-	string getDescription() const;
-	Story* getNextPart() const;
-	void setDescription(string dsc);
-	void setNextPart(Story* NxtPrt);
-	
+	Choices(const string dsc, Story* next);
+	Story* getNextStory() const;	
 };
 

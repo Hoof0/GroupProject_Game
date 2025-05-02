@@ -1,23 +1,27 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "StoryElement.h"
 using namespace std;
 
 class Choices;
 
-class Story
+class Story:public StoryElement
 {
 private:
-	string Naration;
 	vector<Choices> Choiceses;
-	bool Ending = false;
+	bool ending;
 public:
+	Story(string text, vector<Choices> ch, bool end = false){
+		Choiceses = ch;
+		ending = end;
+	};
 	Story() = default;
 	void setNaration(string Nar);
 	bool getEnding() const;
-	void setEnding(bool End);
+	void setEnding(bool end);
 	Story GetKeyPress();
 	const vector<Choices>& getChoiceses() const;
-	void display(string Nar, vector<Choices> choice);
+	void display(string nar, vector<Choices> ch);
 };
 
