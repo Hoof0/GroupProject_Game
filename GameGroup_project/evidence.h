@@ -12,4 +12,5 @@ public:
     int getIDnumber() const;
     void setName(string n);
     void setIDnumber(int ID);
+    bool operator==(const evidence &right);
 };

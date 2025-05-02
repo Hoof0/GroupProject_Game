@@ -20,6 +20,7 @@ public:
 	void setNaration(string Nar);
 	bool getEnding() const;
 	void setEnding(bool end);
+	void setChoiceses(const vector<Choices>& ch, Story* nextStory);
 	Story GetKeyPress();
 	const vector<Choices>& getChoiceses() const;
 	void display(string nar, vector<Choices> ch);
