@@ -17,14 +17,6 @@ void clearScreen() {
     #endif
 }
 
-// Cross-platform function to get a single character
-char getChar() {    
-    // Unix/Linux/MacOS
-    system("stty raw");
-    char c = getchar();
-    system("stty cooked");
-    return c;
-}
 
 int main() {
     // Create evidence items that might be discovered throughout the story

@@ -55,8 +55,7 @@ Story Story::GetKeyPress()
 			}
 		}
 
-	
-	
+
 	// Return the next story based on the choice
 	return *Choiceses[playerChoice - 1].getNextStory();
 }
