@@ -10,7 +10,8 @@ class Choices:public StoryElement
 private:
 	Story* nextStory;
 public:
-	Choices(const string dsc, Story* next);
+	Choices(const string dsc, Story* next) : StoryElement(dsc), nextStory(next) { };
+	Choices() = default;
 	Story* getNextStory() const;	
 };
 
