@@ -18,6 +18,11 @@ void evidence::setIDnumber(int ID){
     idNumber = ID;
 }
 
+void evidence::setInventory(vector<string> inv){
+    vector<string> temp;
+    
+}
+
 bool evidence::operator==(const evidence &right){
     bool result = false;
     if (idNumber == right.idNumber){

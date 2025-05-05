@@ -3,6 +3,7 @@
 #include "Choices.h"
 
 
+
 bool Story::getEnding() const
 {
 	return ending;
