@@ -10,11 +10,7 @@ using namespace std;
 
 // Cross-platform function to clear screen
 void clearScreen() {
-    #ifdef _WIN32
-        system("cls");
-    #else
-        system("clear");
-    #endif
+    system("clear");
 }
 
 
