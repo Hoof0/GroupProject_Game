@@ -20,11 +20,12 @@ int main() {
     knife->setName("Bloody Knife");
     knife->setIDnumber(1);
     knife->setDescription("A knife with traces of blood on it");
-    
+
     evidence* letter = new evidence();
     letter->setName("Mysterious Letter");
     letter->setIDnumber(2);
     letter->setDescription("A letter with strange symbols");
+    
     
     evidence* photo = new evidence();
     photo->setName("Family Photo");
