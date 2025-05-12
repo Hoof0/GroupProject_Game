@@ -70,6 +70,7 @@ int main() {
     introScene->setChoiceses("Head into the forest", forestScene);
     introScene->setChoiceses("Follow the sound of water", riverScene);
     
+    
     forestScene->setChoiceses("Investigate the cabin you see in the distance", cabinScene);
     forestScene->setChoiceses("Look for a path out of the forest", endingBad);
     
