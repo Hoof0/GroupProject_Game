@@ -50,7 +50,7 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 		cin >> playerChoice;
 
 			// Check if the choice is valid
-			if (playerChoice >= 1 && playerChoice <= static_cast<int>(Choiceses.size())) {
+			if (playerChoice >= 1 && playerChoice <= Choiceses.size()) {
 				validInput = true;
 				cout << "You selected option " << playerChoice << endl;
 			} else {
