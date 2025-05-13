@@ -1,10 +1,12 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "evidence.h"
 #include "StoryElement.h"
 using namespace std;
 
 class Choices;
+class evidence;
 
 class Story:public StoryElement
 {
@@ -17,8 +19,9 @@ public:
 	void setNaration(string Nar);
 	bool getEnding() const;
 	void setEnding(bool end);
-	void setChoiceses(const string description, Story* nextStory);
-	Story GetKeyPress();
+	void setChoiceses(const string description, Story* nextStory, bool isFunction = false);
+	void compareEvidence(const vector<evidence*>& inventory, int& result);
+	Story GetKeyPress(vector<evidence*>& inventory, int& result);
 	const vector<Choices>& getChoiceses() const;
 	void display(string nar, vector<Choices> ch);
 };
