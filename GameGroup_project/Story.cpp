@@ -76,7 +76,9 @@ void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 	cout << "The evidence you have collected so far: " << endl;
 	for (size_t i=0; i <inventory.size(); i++){
 		if(inventory[i]->getHasFound() == true){
-			cout << inventory[i]->getName() << endl;
+			for (size_t i = 0; i < inventory.size(); i++) {
+				cout << i + 1 << ". " << inventory[i]->getName() << endl;
+			}
 		}
 	}
 
