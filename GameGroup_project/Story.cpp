@@ -1,4 +1,4 @@
-#pragma once
+
 #include "Story.h"
 #include <iostream>
 #include "Choices.h"
