@@ -37,5 +37,78 @@ int main() {
 
     act1End->setNaration("(The plane lands hours later. Police arrest Aurora Antonae—framed by Mika via planted evidence. Headlines scream: “NOVATECH CEO MURDERED BY DISGRUNTLED FLIGHT ATTENDANT.”\n\nHoof Kaslei (ending narration):\n(sipping a tropical drink on a beach, scrolling past the news)\n“Huh. Guess rich guys do have enemies. …Wait, was that the lady with the scar? Whatever.”\n\nGAME OVER: “Ignorance is (Bitter) Bliss”");
     act1End->setEnding(true);
- 
+
+    //Key clues
+    evidence* penInTrash = new evidence();
+    penInTrash->setName("Syringe-Pen in the Galley Trash");
+    penInTrash->setDescription("Coated with aconite residue, NovaTech-branded — matches the murder weapon used on Victor’s neck pillow.");
+    penInTrash->setIDnumber(0);
+    penInTrash->setHasFound(false);
+
+    evidence* tornPhoto = new evidence();
+    tornPhoto->setName("Torn Photo in Victor’s Pocket");
+    tornPhoto->setDescription("One half shows Victor with a young woman (Ami Sato) at a NovaTech gala; the other half is hidden in Mika’s locket.");
+    tornPhoto->setIDnumber(1);
+    tornPhoto->setHasFound(false);
+
+    evidence* threatNote = new evidence();
+    threatNote->setName("Threatening Note under Harrison’s Seat");
+    threatNote->setDescription("Hand-written: “You ruined my life. Enjoy your last flight.” Matches Harrison’s handwriting.");
+    threatNote->setIDnumber(2);
+    threatNote->setHasFound(false);
+    
+    evidence* sedativeCoffee = new evidence();
+    sedativeCoffee->setName("Sedative-Laced Coffee Cup at Alex’s Seat");
+    sedativeCoffee->setDescription("Traces of a fast-acting sedative prove Alex was awake and drugged, falsifying his 'jet-lag' alibi.");
+    sedativeCoffee->setIDnumber(3);
+    sedativeCoffee->setHasFound(false);
+
+    evidence* lavaFootage = new evidence();
+    lavaFootage->setName("Lavatory Security Footage");
+    lavaFootage->setDescription("Clara Voss is seen entering the lavatory 10 minutes before Victor—seems damning but she was actually ill.");
+    lavaFootage->setIDnumber(4);
+    lavaFootage->setHasFound(false);
+
+    //False leads
+    evidence* penAurora = new evidence();
+    penAurora->setName("Clean Syringe-Pen on Aurora’s Apron");
+    penAurora->setDescription("Identical pen, no poison—Aurora insists it’s standard catering issue.");
+    penAurora->setIDnumber(5);
+    penAurora->setHasFound(false);
+
+    evidence* insulinPen = new evidence();
+    insulinPen->setName("Broken Insulin Pen in Alex’s Bag");
+    insulinPen->setDescription("A diabetic passenger’s device, mistaken at first for the murder weapon.");
+    insulinPen->setIDnumber(6);
+    insulinPen->setHasFound(false);
+
+    evidence* wedPhoto = new evidence();
+    wedPhoto->setName("Wedding Photo Fragment in Clara’s Purse");
+    wedPhoto->setDescription("Clara and Victor at a charity gala—suggests romance, but strictly professional.");
+    wedPhoto->setIDnumber(7);
+    wedPhoto->setHasFound(false);
+
+    evidence* anonymousNote = new evidence();
+    anonymousNote->setName("Anonymous Typed Note on Alex’s Coffee Cup");
+    anonymousNote->setDescription("“Payback’s a killer.” Generic and not linked to any suspect’s handwriting.");
+    anonymousNote->setIDnumber(8);
+    anonymousNote->setHasFound(false);
+
+    evidence* teaBagMika = new evidence();
+    teaBagMika->setName("Herbal Tea Bag on Mika’s Trolley");
+    teaBagMika->setDescription("Chamomile — looks like a poison pouch but harmless.");
+    teaBagMika->setIDnumber(9);
+    teaBagMika->setHasFound(false);
+
+    evidence* whiskeyBottle = new evidence();
+    whiskeyBottle->setName("Whiskey Bottle near Harrison’s Seat");
+    whiskeyBottle->setDescription("Suggests murder by liquor, but contains only plain alcohol.");
+    whiskeyBottle->setIDnumber(10);
+    whiskeyBottle->setHasFound(false);
+
+    evidence* fingerprintFlute = new evidence();
+    fingerprintFlute->setName("Champagne Flute with Fingerprints in the Galley (new Aurora lead)");
+    fingerprintFlute->setDescription("A single flute stained with aconite traces and Aurora’s fingerprints—seems to implicate her, but was planted by Mika.");
+    fingerprintFlute->setIDnumber(11);
+    fingerprintFlute->setHasFound(false);
 }
