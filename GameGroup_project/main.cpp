@@ -35,8 +35,7 @@ int main() {
     act1Scene->setChoiceses("“Investigate the body.”", act1Choice1);
     act1Scene->setChoiceses("“Not my problem. I’m on holiday.”", act1Choice2);
 
-    act1End->setEnding(true);
     act1End->setNaration("(The plane lands hours later. Police arrest Aurora Antonae—framed by Mika via planted evidence. Headlines scream: “NOVATECH CEO MURDERED BY DISGRUNTLED FLIGHT ATTENDANT.”\n\nHoof Kaslei (ending narration):\n(sipping a tropical drink on a beach, scrolling past the news)\n“Huh. Guess rich guys do have enemies. …Wait, was that the lady with the scar? Whatever.”\n\nGAME OVER: “Ignorance is (Bitter) Bliss”");
-
+    act1End->setEnding(true);
  
 }
