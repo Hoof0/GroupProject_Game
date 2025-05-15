@@ -33,5 +33,8 @@ bool evidence::operator==(const evidence &right){
     if (idNumber == right.idNumber){
         result = true;
     }
+    else {
+        result = false;
+    }
     return result;
 }

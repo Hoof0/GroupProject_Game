@@ -124,6 +124,8 @@ int main() {
         // Display current storys
         cout << currentStory.getDescription() << endl << endl;
 
+        
+
         // Display choices
         currentStory.display(currentStory.getDescription(), currentStory.getChoiceses());
         
