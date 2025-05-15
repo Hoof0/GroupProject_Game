@@ -51,7 +51,7 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 		cout << "Enter your choice: ";
 		cin >> playerChoice;
 		
-			// for case choiceses = 1
+			// for case choiceses = 1 fail 
 			if (isdigit(playerChoice) && Choiceses.size() == 1 && playerChoice == 1) {
 				validInput = true;
 				cout << "You selected option " << playerChoice << endl;
