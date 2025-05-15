@@ -39,7 +39,8 @@ int main() {
 
 
 
-    introScene->setChoiceses()
+    introScene->setChoiceses();
 
- 
+
+    
 }
