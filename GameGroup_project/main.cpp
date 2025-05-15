@@ -14,6 +14,7 @@ void clearScreen() {
 
 int main() {
     vector<evidence*> inventory;
+    int evidenceConnectionResult;
 
     string collectedEvidence;
 
@@ -111,4 +112,42 @@ int main() {
     fingerprintFlute->setDescription("A single flute stained with aconite traces and Aurora’s fingerprints—seems to implicate her, but was planted by Mika.");
     fingerprintFlute->setIDnumber(11);
     fingerprintFlute->setHasFound(false);
+
+    // Main game loop
+    Story currentStory = *act1Scene;
+    bool gameRunning = true;
+
+    while (!currentStory.getEnding() && gameRunning) 
+    {
+        clearScreen();
+        
+        // Display current storys
+        cout << currentStory.getDescription() << endl << endl;
+
+        // Display choices
+        currentStory.display(currentStory.getDescription(), currentStory.getChoiceses());
+        
+        // Get player choice
+        currentStory = currentStory.GetKeyPress(inventory, evidenceConnectionResult);
+    
+    }
+       
+
+    // Display ending
+    if (currentStory.getEnding()) {
+        clearScreen();
+        cout << currentStory.getDescription() << endl << endl;
+        cout << "THE END" << endl;
+    }
+
+    // Clean up
+    delete act1Scene;
+    delete act1Choice1;
+    delete act1Choice2;
+    
+    for (auto ev : inventory) {
+        delete ev;
+    }
+    
+    return 0;
 }
