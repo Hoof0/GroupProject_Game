@@ -1,7 +1,9 @@
+
 #include "Story.h"
 #include <iostream>
 #include "Choices.h"
 #include <limits>
+#include <cctype>
 
 
 bool Story::getEnding() const
@@ -50,7 +52,7 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 		cin >> playerChoice;
 
 			// Check if the choice is valid
-			if (playerChoice >= 1 && playerChoice <= Choiceses.size()) {
+			if (isdigit(playerChoice) && playerChoice >= 1 && playerChoice <= Choiceses.size()) {
 				validInput = true;
 				cout << "You selected option " << playerChoice << endl;
 			} else {

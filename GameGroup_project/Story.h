@@ -3,6 +3,7 @@
 #include <vector>
 #include "evidence.h"
 #include "StoryElement.h"
+#include <cctype>
 using namespace std;
 
 class Choices;
