@@ -40,7 +40,7 @@ int main() {
     sideEnding->setChoiceses("“Not my problem. I’m on holiday.”", act1Choice2);
 
     sideEnding->setEnding(true);
-    sideEnding->setNaration("The plane lands hours later. Police arrest Aurora Antonae—framed by Mika via planted evidence. Headlines scream: “NOVATECH CEO MURDERED BY DISGRUNTLED FLIGHT ATTENDANT.”\n\nHoof Kaslei:\n(sipping a tropical drink on a beach, scrolling past the news) “Huh. Guess rich guys do have enemies. …Wait, was that the lady with the scar? Whatever.”");
+    
     
     // Main game loop
     Story currentStory = *act1Scene;
@@ -52,13 +52,15 @@ int main() {
         
         // Display current storys
         cout << currentStory.getDescription() << endl << endl;
-    }
-       // Display choices
+
+        // Display choices
         currentStory.display(currentStory.getDescription(), currentStory.getChoiceses());
         
         // Get player choice
         currentStory = currentStory.GetKeyPress(inventory, evidenceConnectionResult);
     
+    }
+       
 
     // Display ending
     if (currentStory.getEnding()) {
@@ -68,10 +70,10 @@ int main() {
     }
 
     // Clean up
-     delete act1Scene;
-     delete act1Choice1;
-     delete act1Choice2;
-     delete sideEnding;
+    delete act1Scene;
+    delete act1Choice1;
+    delete act1Choice2;
+    delete sideEnding;
     
     for (auto ev : inventory) {
         delete ev;
