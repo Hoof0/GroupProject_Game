@@ -4,6 +4,7 @@
 #include "evidence.h"
 #include "StoryElement.h"
 #include <cctype>
+#include <cstdlib>
 using namespace std;
 
 class Choices;

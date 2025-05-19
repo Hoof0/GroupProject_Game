@@ -4,6 +4,7 @@
 #include "Choices.h"
 #include <limits>
 #include <cctype>
+using namespace std;
 
 
 bool Story::getEnding() const
@@ -44,21 +45,21 @@ void Story::display(string nar, vector<Choices> ch)
 
 Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 {
-	int playerChoice = 0;
+	string playerChoice = "0";
 	bool validInput = false;
 
 	while (validInput == false) {
 		cout << "Enter your choice: ";
-		cin >> playerChoice;
+		getline(cin,playerChoice);
 		
 			// for case choiceses = 1 fail 
-			if (isdigit(playerChoice) && Choiceses.size() == 1 && playerChoice == 1) {
+			if (Choiceses.size() == 1 && stoi(playerChoice) == 1) {
 				validInput = true;
 				cout << "You selected option " << playerChoice << endl;
 
 			} 
 
-			else if (isdigit(playerChoice) && playerChoice >= 1 && playerChoice <= Choiceses.size()) {
+			else if (stoi(playerChoice) >= 1 && stoi(playerChoice) <= Choiceses.size()) {
 				validInput = true;
 				cout << "You selected option " << playerChoice << endl;
 			} else {
@@ -66,7 +67,7 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 			}
 		}
 
-	Choices selectedChoice = Choiceses[playerChoice - 1];
+	Choices selectedChoice = Choiceses[stoi(playerChoice) - 1];
 
 	if (selectedChoice.getIsFunction()) {
 
@@ -76,7 +77,7 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 	}
 
 	// Return the next story based on the choice
-	return *Choiceses[playerChoice - 1].getNextStory();
+	return *Choiceses[stoi(playerChoice) - 1].getNextStory();
 }
 
 void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
