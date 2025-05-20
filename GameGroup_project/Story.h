@@ -18,7 +18,6 @@ private:
 public:
 	Story(string text, vector<Choices> ch, bool end = false) : StoryElement(text), ending(end) { };
 	Story() = default;
-	void setNaration(string Nar);
 	bool getEnding() const;
 	void setEnding(bool end);
 	void setChoiceses(const string description, Story* nextStory, bool isFunction = false);
