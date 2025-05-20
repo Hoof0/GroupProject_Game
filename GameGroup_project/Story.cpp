@@ -149,4 +149,37 @@ void Story::printInventory(const vector<evidence*>& inventory){
 			}
 		}
 	}
+
+	cout << "\nPress Enter to continue...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    cin.get();
+}
+
+void Story::interrogate(const vector<evidence*>& inventory){
+	cout << "The evidence you have collected so far: " << endl;
+	for (size_t i=0; i <inventory.size(); i++){
+		if(inventory[i]->getHasFound() == true){
+			for (size_t i = 0; i < inventory.size(); i++) {
+				cout << i + 1 << ". " << inventory[i]->getName() << endl;
+			}
+		}
+	}
+
+	int Choice = 0;
+	bool validFirstChoice = false;
+	while (validFirstChoice == false) {
+		cout << "Select the first evidence to compare: ";
+		cin >> Choice;
+
+		if (Choice >= 1 && Choice <= inventory.size() && inventory[Choice - 1]->getHasFound() == true) {
+			validFirstChoice = true;
+		}
+		else {
+			cout << "Invalid choice. Please choose between 1 and " << inventory.size() << "." << endl;
+		}
+	}
+
+	evidence* tempEvi = inventory[Choice - 1];
+
+	
 }
