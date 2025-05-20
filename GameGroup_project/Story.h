@@ -20,8 +20,9 @@ public:
 	Story() = default;
 	bool getEnding() const;
 	void setEnding(bool end);
-	void setChoiceses(const string description, Story* nextStory, bool isFunction = false);
+	void setChoiceses(const string description, Story* nextStory, int typeFunction);
 	void compareEvidence(const vector<evidence*>& inventory, int& result);
+    void printInventory(const vector<evidence*>& inventory);	
 	Story GetKeyPress(vector<evidence*>& inventory, int& result);
 	const vector<Choices>& getChoiceses() const;
 	void display(string nar, vector<Choices> ch);

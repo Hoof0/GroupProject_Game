@@ -22,10 +22,10 @@ const vector<Choices>& Story::getChoiceses() const
 	return Choiceses;
 }
 
-void Story::setChoiceses(const string description, Story* nextStory, bool isFunction)
+void Story::setChoiceses(const string description, Story* nextStory, int typeFunction)
 {
 	Choices newChoice(description, nextStory);
-	newChoice.setIsFunction(isFunction);
+	newChoice.setTypeFunction(typeFunction);
 	Choiceses.push_back(newChoice);
 }
 
@@ -52,14 +52,7 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 		cout << "Enter your choice: ";
 		getline(cin,playerChoice);
 		
-			// for case choiceses = 1 fail 
-			if (Choiceses.size() == 1 && stoi(playerChoice) == 1) {
-				validInput = true;
-				cout << "You selected option " << playerChoice << endl;
-
-			} 
-
-			else if (stoi(playerChoice) >= 1 && stoi(playerChoice) <= Choiceses.size()) {
+			if (stoi(playerChoice) >= 1 && stoi(playerChoice) <= Choiceses.size()) {
 				validInput = true;
 				cout << "You selected option " << playerChoice << endl;
 			} else {
@@ -69,15 +62,23 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 
 	Choices selectedChoice = Choiceses[stoi(playerChoice) - 1];
 
-	if (selectedChoice.getIsFunction()) {
+	if (selectedChoice.getTypeFunction() == 1) {
 
 		compareEvidence(inventory, result);
 
 		return *this;
 	}
 
+	else if (selectedChoice.getTypeFunction() == 2){
+		printInventory(inventory);
+
+		return *this;
+	}
+
+
 	// Return the next story based on the choice
 	return *Choiceses[stoi(playerChoice) - 1].getNextStory();
+
 }
 
 void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
@@ -135,4 +136,17 @@ void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 	cout << "\nPress Enter to continue...";
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
     cin.get();
+}
+
+
+void Story::printInventory(const vector<evidence*>& inventory){
+	
+	cout << "The evidence you have collected so far: " << endl;
+	for (size_t i=0; i <inventory.size(); i++){
+		if(inventory[i]->getHasFound() == true){
+			for (size_t i = 0; i < inventory.size(); i++) {
+				cout << i + 1 << ". " << inventory[i]->getName() << endl;
+			}
+		}
+	}
 }
