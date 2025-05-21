@@ -7,6 +7,7 @@
 #include <cstdlib>
 using namespace std;
 
+//foward declaration
 class Choices;
 class evidence;
 
