@@ -8,8 +8,8 @@
 
 using namespace std;
 
-void clearScreen() {
-    system("clear");
+void clearScreen(){
+    system("cls");
 }
 
 int main() {
