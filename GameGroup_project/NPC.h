@@ -1,7 +1,7 @@
 #include <string>
-#include <StoryElement.h>
+#include "StoryElement.h"
 #include <vector>
-#include <Story.h>
+#include "Story.h"
 using namespace std;
 
 class NPC:public StoryElement
@@ -9,7 +9,7 @@ class NPC:public StoryElement
     private:
     string name;
     bool isSuspect;
-    vector<string> dialogue;
+    vector<string> dialogues;
     public:
 
     NPC() = default;
@@ -18,7 +18,7 @@ class NPC:public StoryElement
     string getName() const;
     bool getIsSuspect() const;
     vector<string> getDialogues() const;
-    string getDialogue() const;
+    string getDialogue(int index) const;
 
     void setName(const string &NPCname);
     void setSuspect(bool suspect);
