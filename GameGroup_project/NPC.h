@@ -2,14 +2,16 @@
 #include "StoryElement.h"
 #include <vector>
 #include "Story.h"
-using namespace std;
+#include "dialogueOption.h"
 
+using namespace std;
+class dialogueOption;
 class NPC:public StoryElement
 {
     private:
     string name;
     bool isSuspect;
-    vector<string> dialogues;
+    vector<dialogueOption> dialogues;
     public:
 
     NPC() = default;
@@ -17,7 +19,7 @@ class NPC:public StoryElement
     
     string getName() const;
     bool getIsSuspect() const;
-    vector<string> getDialogues() const;
+    vector<dialogueOption> getDialogues() const;
     string getDialogue(int index) const;
 
     void setName(const string &NPCname);

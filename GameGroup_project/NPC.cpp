@@ -7,7 +7,7 @@ string NPC::getName() const
     bool NPC::getIsSuspect() const{
         return isSuspect;
     }
-    vector<string> NPC::getDialogues() const
+    vector<dialogueOption> NPC::getDialogues() const
     {
         return dialogues;
     }
