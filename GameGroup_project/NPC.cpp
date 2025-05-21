@@ -11,7 +11,7 @@ string NPC::getName() const
     {
         return dialogues;
     }
-    string NPC::getDialogue(int index) const
+    dialogueOption NPC::getDialogue(int index) const
     {
         if (index >= 0 && index < static_cast<int>(dialogues.size())) {
         return dialogues[index];

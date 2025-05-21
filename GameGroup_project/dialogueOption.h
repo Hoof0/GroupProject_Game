@@ -3,8 +3,6 @@
 #include <vector>
 #include "evidence.h"
 #include "Story.h"
-#include "NPC.h"
-#include "DialogueResponse.h"
 using namespace std;
 
 class DialogueResponse;
