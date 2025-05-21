@@ -21,6 +21,8 @@ public:
 	bool getEnding() const;
 	void setEnding(bool end);
 	void setChoiceses(const string description, Story* nextStory, int typeFunction);
+	// game function
+	void interrogate(const vector<evidence*>& inventory);
 	void compareEvidence(const vector<evidence*>& inventory, int& result);
     void printInventory(const vector<evidence*>& inventory);	
 	Story GetKeyPress(vector<evidence*>& inventory, int& result);
