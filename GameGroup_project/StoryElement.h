@@ -1,5 +1,8 @@
 #pragma once
 #include<string>
+#include<iostream>
+#include<chrono>
+#include<thread>
 using namespace std;
 
 class StoryElement {

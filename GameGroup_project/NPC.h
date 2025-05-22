@@ -1,27 +1,32 @@
 #include <string>
 #include "StoryElement.h"
 #include <vector>
+#include <map>
 #include "Story.h"
 #include "dialogueOption.h"
 
 using namespace std;
+
+class KnowledgeNode;
 class dialogueOption;
+
+
 class NPC:public StoryElement
 {
-    private:
+private:
     string name;
-    bool isSuspect;
-    vector<dialogueOption> dialogues;
-    public:
-
+    string description;
+    map<int, string> dialogueMap;
+public:
     NPC() = default;
-    NPC(const string& desc, const string& NPCname, bool suspect = false, string dialogue):StoryElement(desc), name(NPCname), isSuspect(suspect) {};
-    
-    string getName() const;
-    bool getIsSuspect() const;
-    vector<dialogueOption> getDialogues() const;
-    string getDialogue(int index) const;
 
+    string getName() const;
+    string getDescription() const;
+    map<int, string> getDialogueMap() const;
+
+    void talk() const;
+    void setDescription(const string& dsc);
+    void addDefaultOption(const string& text, int connectionID);
     void setName(const string &NPCname);
     void setSuspect(bool suspect);
     void addDialogue(const string &dialogue);
