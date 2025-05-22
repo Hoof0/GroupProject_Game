@@ -3,6 +3,7 @@
 
 
 string StoryElement::getDescription() const{
+    // slowly print text
     for (char c : description){
         cout << c << flush;
         this_thread::sleep_for(chrono::milliseconds(50));
