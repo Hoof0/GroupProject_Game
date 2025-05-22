@@ -19,7 +19,10 @@ public:
     string getDescription() const;
     void setDescription(string dsc);
     void setIsUnlocked(bool unlocked);
-    void addDialogueOption(const dialogueOption& option){
+    void setDialogueOption(const dialogueOption& option){
         return unlockedOption.push_back(option);
+    };
+    const vector<dialogueOption>& getDialogueOptions() const {
+        return unlockedOption;
     };
 };

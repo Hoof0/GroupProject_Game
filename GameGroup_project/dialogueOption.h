@@ -11,14 +11,14 @@ class dialogueOption:public StoryElement{
 private:
     string text;
     int ConnectionID;
-    DialogueResponse response;
+    DialogueResponse* response;
 public:
     dialogueOption() = default;
     string getText() const;
     void setText(string t);
     int getConnectionID() const;
     const DialogueResponse& getDialogueResponse() const{
-        return response;
+        return* response;
     };
     void setResponse(const DialogueResponse& resp);
 };
