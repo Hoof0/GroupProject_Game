@@ -145,7 +145,13 @@ int main() {
 
     //Interrogate NPC to take testimony
     collectTeabag->setChoiceses("Continue investigating.", investigatePassengers, 0);
-    investigatePassengers->setChoiceses("Interrogate", interrogatePassengers, 0);
+    if (currentStory.getDescription() == investigatePassengers->getDescription() && inventory.size() >= 12)
+    {
+        cout << "Now that you had collected all the evidence, it was time to confront each suspect for their testimony";
+        investigatePassengers->setChoiceses("Interrogate", interrogatePassengers, 0);  
+    }
+
+
     
 
     //Key clues
@@ -319,11 +325,6 @@ int main() {
             inventory.push_back(fingerprintFlute);
             cout << "\nNEW EVIDENCE: You found " << fingerprintFlute->getName() << " and confronted Aurora and Mika about it:\n " << auroraToMikaFlute->getDescription() << endl;
         }
-        if (currentStory.getDescription() == investigatePassengers->getDescription() && inventory.size() >= 12)
-        {
-            cout << "Now that you had collected all the evidence, it was time to confront each suspect for their testimony";
-        }
-
 
 
         // Display choices
