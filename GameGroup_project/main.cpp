@@ -127,7 +127,7 @@ int main() {
     investigateClara->setDescription("You approached Clara and requested to search her belongings. She resisted at first, but relented when showed the footage.\nYou searched her bag, and found a photo in her purse.");
     investigateClara->setChoiceses("Inspect the photo.", collectClaraPhoto, 0);
     collectClaraPhoto->setDescription("Clara and Victor at a charity gala-the two might be in a romantic relationship in the past.");
-    //Collect evidence 6, 12
+    //Collect evidence 6, 10, 12
     collectClaraPhoto->setChoiceses("Continue investigating.", investigatePassengers, 0);
     investigatePassengers->setChoiceses("Flight attendants", investigateAuroraPen, 0);
     investigateAuroraPen->setDescription("When you came to talk to Aurora, you saw her chatting with Mika. They were talking about Aurora's pen. Seeing you coming, Mika excused herself and left, while Aurora greeted you.\nAurora Antonae:\n(bowing her head slightly)\nMr Kaslei. Are you coming back for that martini? I assure you, you won't be disappointed.\n\nHoof Kaslei:\n(grunted, ignoring Aurora's invitation)\nNo interest nor time for that. What were you...\n\nYour voice died in your throat, and your eyes were glued to the pen hung on the chest pocket of Aurora's uniform.\n\nHoof Kaslei:\n(supressed surprise and wariness in his voice)\nMay I have a look at your pen?\n\nAurora Antonae:\n(shrugging)\nSure, why not?\n(hand you her pen).");
@@ -141,6 +141,7 @@ int main() {
     investigateMika->setDescription(" You quickly retrieved the flute, and returned to Aurora's seat. Mika was also there, likely coming back to continue their chat. When you approached, Mika handed you a herbal tea bag, claiming she found it on her trolley, and that she left a while ago to retrieve it and bring it to you. Mika suspected that the tea bag might contain poison.");
     investigateMika->setChoiceses("Inspect the tea bag.", collectTeabag, 0);
     collectTeabag->setDescription("Chamomile - looks like a poison pouch but harmless.");
+    
 
     //Key clues
     evidence* penOnVictor = new evidence();
@@ -312,6 +313,10 @@ int main() {
             fingerprintFlute->setHasFound(true);
             inventory.push_back(fingerprintFlute);
             cout << "\nNEW EVIDENCE: You found " << fingerprintFlute->getName() << " and confronted Aurora and Mika about it:\n " << auroraToMikaFlute->getDescription() << endl;
+        }
+        if (inventory.size() == 12)
+        {
+            cout << "Now that you had collected all the evidence, it was time to confront each suspect for their testimony";
         }
 
 
