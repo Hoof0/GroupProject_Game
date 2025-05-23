@@ -207,7 +207,9 @@ int main() {
         clearScreen();
         
         // Display current storys
-        cout << currentStory.getDescription() << endl << endl;
+        string currentDescription = currentStory.getDescription();
+        currentStory.printDescription();
+        cout << endl;
 
         //Dialogue snippets of characters with collected evidences
         if (currentStory.getDescription() == penOnVictor->getDescription())

@@ -13,5 +13,6 @@ public:
         description = dsc;
     }
     string getDescription() const;
+    void printDescription() const;
     void setDescription(string dsc);
 };
