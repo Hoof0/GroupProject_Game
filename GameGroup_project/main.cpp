@@ -49,16 +49,26 @@ int main() {
     //evidence collecting
     Story* collectPen = new Story();
     Story* collectTornPhoto = new Story();
-    Story* interrogatePassengers = new Story();
-    Story* interrogateHarrisonNote = new Story();
+    Story* investigatePassengers = new Story();
+    Story* investigateHarrisonNote = new Story();
     Story* collectThreatNote = new Story();
+    Story* investigateHarrisonBottle = new Story();
+    Story* collectWhiskeyBottle = new Story();
+    Story* investigateAlexCoffee = new Story();
+    Story* collectAlexCoffee = new Story();
+    Story* inspectAlexBag = new Story();
+    Story* collectAlexPen = new Story();
+    Story* eavesdropAlex = new Story();
+    Story* getAnonymousNote = new Story();
+    Story* collectAnonymousNote = new Story();
+    Story* checkCam = new Story();
 
     act1Scene->setDescription("Good afternoon passengers. This is your captain speaking. First I'd like to welcome everyone on Finorza Flight 77F. We are currently cruising at an altitude of 33,000 feet at an airspeed of 400 miles per hour. The time is 3:47 pm. The weather looks good, and with the tailwind on our side, we are expecting to land in Tokyo approximately fifteen minutes ahead of schedule. The weather in Tokyo is clear and sunny, with a high of 25 degrees for this afternoon. If the weather cooperates, we should get a great view of the city as we descend. The cabin crew will be coming around in about twenty minutes to offer you a light snack and beverage. I'll talk to you again before we reach our destination. Until then, sit back, relax and enjoy the rest of the flight.\n\nIn the first class cabin...\n\nHoof Kaslei (Player):\n(sigh)\nIt has been so long since I had the time for such a wonderful vacation. Though, if any unfortunate thing happens, I might just hide myself and not interfere... At least...\n\nMika Sato:\n(approaching you with a polished smile)\nWelcome aboard, Mr. Kaslei. Champagne? Or something stronger to help you... relax?\n(Her tone is playful, but her eyes linger a beat too long on the empty first-class seat reserved for Victor Kane, who hasn't boarded yet.)\n\nHoof Kaslei:\n(grunts, stowing his briefcase under the seat)\nJust water. And save the small talk-I'm here to sleep, not chat.\n\nMika Sato:\n(pours water into a glass, her locket swinging forward slightly)\nOf course. Long flights can be draining. But if you change your mind...\n(She nods to the trolley. A pen with a NovaTech logo-identical to the syringe-pen later used to kill Victor-rolls into view. She quickly tucks it away.)\n\nHoof Kaslei:\n(narrows eyes at the pen)\nYou techies and your gadgets. That thing record conversations too?\n\nMika Sato:\n(laughs, too sharp)\nJust a souvenir from a... difficult passenger. Let me know if you need anything else.\n\n(She moves down the aisle, her smile tightening as she stops at Alex Rivera, slumped in his seat with a half-empty coffee cup.)\n\n...\n\nMika Sato:\nAnother coffee, sir? You've been awake since takeoff.\n\nAlex Rivera:\n(startled, spills coffee on his shirt)\nN-no! I'm fine. Totally fine. Just... jet lag.\n\nMika Sato:\n(noticing his trembling hands, softens)\n...I'll bring you a blanket. You look like you've seen a ghost.\n\n...\n\nMika Sato:\nMs. Voss, your usual gin tonic?\n\nClara Voss:\n(doesn't look up, voice icy)\nTell Victor I don't want his 'courtesy drinks' when he boards. I'm not here to network.\n\nMika Sato:\n(pours the drink anyway, placing it beside Clara's laptop)\nHe'll be seated in 2A. I'm sure he'll insist on saying hello.\n\n...\n\nMika Sato (to Harrison):\nWhiskey, neat? You've barely touched your last one.\n\nHarrison Gray:\n(slams the notebook shut, revealing a crumpled photo of Victor)\nWhat I need is for this flight to land. Before I-\n(He stops himself, glaring at Victor's empty seat.)\n\nMika Sato:\n(gently replaces his glass)\nSome things are best served cold, Mr. Gray.\n\nThe flight is getting a bit too long. You decided to go to the restroom for some... personal stuff... Then, something caught your attention...\n\nAurora Antonae:\n(adjusting her scarf to hide her platinum streak, voice clipped)\nFirst Class is restless. The NovaTech contingent keeps demanding upgrades. As if we stock unicorn caviar.\n(She loads a tray with champagne flutes, her gloved hands lingering on a NovaTech pen identical to Mika's syringe-weapon.)\n\nMika Sato:\n(stiffening, her locket chain peeking out)\nIgnore them. They'll drown in their own entitlement soon enough.\n\nAurora Antonae:\n(noticing Mika's locket, smirking)\nStill clinging to that? Sentimentality's a liability, senpai. Especially around vipers like-\n(She nods toward Victor Kane's empty seat.)\n\nMika Sato:\n(cutting her off, icy)\nFocus on the champagne, Aurora. Or I'll reassign you to diaper duty in Economy.\n\n(Aurora rolls her eyes and exits the galley, nearly colliding with you, who's ambling toward the lavatory. She pastes on a flawless smile.)\n\nAurora Antonae:\n(blocking his path with the trolley, saccharine-sweet)\nMr. Kaslei! Can I interest you in our exclusive pre-landing martini? Shaken, not stirred-just like your Instagram posts.\n\nHoof Kaslei:\n(not looking up from his phone)\nI'm good. Move the cart.\n\nAurora Antonae:\n(leaning in, faux-concerned)\nOf course. Though, a word of advice? The lavatory lock jams. Wouldn't want you trapped inside... unable to call your lawyer.\n\nHoof Kaslei:\n(finally glancing at her, deadpan)\nYou're real invested in my bladder. Got a medical degree too?\n\nAurora Antonae:\n(laughs lightly, adjusting her glove to reveal the scar on her wrist)\nJust hospitality training. We're taught to anticipate every need.\n(She moves aside, her smile fading as he passes.)\n\nYou pause near the galley, pretending to fix your shoe. Inside, Mika and Aurora resume talking.\n\nMika Sato:\n(hissing)\nWhy provoke him? He's harmless.\n\nAurora Antonae:\n(snorting)\nHarmless? Rich brats like him are fleas. But don't worry-I'll keep him too distracted to notice your... projects.\n\nYou enter the lavatory and look around, without any care regarding what you have just heard.\n\nHoof Kaslei: That damn woman... Well, it's better for me though, I do NOT want to deal with any drama on my holiday, MY PRECIOUS HOLIDAY.\n\nJust as you were grunting about the insufferable attendants, you hear a loud scream.\n\nFlight Attendant: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA!!!!!!!!!!!!!!!!! HE'S DEAD!!!!!\n\nYou rush towards the source of the scream.\n\nAurora Antonae:\nGirl, what's going on her- Oh! Hey Mika! It's that thing again!\n\nMika Sato:\n(coolly adjusting her scarf over her locket)\nYes, I heard the scream. Now what?\n\nAurora Antonae:\n(shrugging, popping a mint into her mouth)\nNot my business, senpai. I'm too used to these already. There's not much we can do when someone suddenly dies mid-air, you know? Unless...\n(She glances mockingly at the panicking passengers.)\n...someone on this flight is a policeman on vacation or something.\n\nMika Sato:\n(deadpan, turning to secure the galley)\nI'm grateful for your completely helpful words, Ms. Aurora.\n\n(Aurora winks at you, who's hovering nearby, and holds up a champagne bottle.)\n\nAurora Antonae (to you):\nRefill, Mr. Kaslei? Might be your last chance before we all die horribly.\n\n(The captain's voice booms over the intercom: REMAIN CALM. WE ARE DIVERTING TO THE NEAREST AIRPORT. you stare at Victor's body, the syringe-pen, and the chaos around him.)\n\nPlayer Choice:");
     
     act1Choice1->setDescription("(You kneel beside Victor, noticing the syringe-pen's NovaTech branding and a faint bitter almond smell-aconite. Proceed to the mystery.)");
     act1Choice2->setDescription("(You retreat to your seat, put on noise-canceling headphones, and mutter: MY PRECIOUS HOLIDAY.)\n");
 
-    act1Scene->setChoiceses("Investigate the body.", act1Choice1, 0);
+    act1Scene->setChoiceses("investigate the body.", act1Choice1, 0);
     act1Scene->setChoiceses("Not my problem. I'm on holiday.", act1Choice2, 0);
     act1Scene->setChoiceses("Your inventory have: ", inven, 2);
 
@@ -66,16 +76,42 @@ int main() {
     act1End->setEnding(true);
 
     //act 2
-    //Collect evidence
+    //Collect evidence 1, 2
     act1Choice1->setChoiceses("Inspect the pen.", collectPen, 0);
-    collectPen->setDescription("Coated with aconite residue, NovaTech-branded - matches the murder weapon used on Victor's neck pillow.");
+    collectPen->setDescription("Coated with aconite residue, NovaTech-branded - matched the murder weapon used on Victor's neck pillow.");
     collectPen->setChoiceses("Inspect Victor's clothes to find other evidence.", collectTornPhoto, 0);
-    collectTornPhoto->setDescription("One half shows Victor with a young woman (Ami Sato) at a NovaTech gala; the other half is hidden in Mika's locket, which you have noticed when she served you water.");
-    collectTornPhoto->setChoiceses("Go interrogate other passengers:", interrogatePassengers, 0);
-    interrogatePassengers->setDescription("Harrison, Alex, or Clara.");
-    interrogatePassengers->setChoiceses("Harrison", interrogateHarrisonNote, 0);
-    interrogateHarrisonNote->setDescription("When you are wondering who you should go to first, Harrison approaches you with a note in his hand.");
-    interrogateHarrisonNote->setChoiceses("Take the note", collectThreatNote, 0);
+    collectTornPhoto->setDescription("One half showed Victor with a young woman (Ami Sato) at a NovaTech gala; the other half wass hidden in Mika's locket, which you had noticed when she served you water.");
+    collectTornPhoto->setChoiceses("Go investigate other passengers:", investigatePassengers, 0);
+    investigatePassengers->setDescription("Harrison, Alex, Clara, or check security footage.");
+    //Collect evidence 3, 10
+    investigatePassengers->setChoiceses("Harrison", investigateHarrisonNote, 0);
+    investigateHarrisonNote->setDescription("When you were wondering who you should go to first, Harrison approached you with a note in his hand.");
+    investigateHarrisonNote->setChoiceses("Take the note", collectThreatNote, 0);
+    collectThreatNote->setDescription("Hand-written: 'You ruined my life. Enjoy your last flight'. Matches Harrison's handwriting.");
+    collectThreatNote->setChoiceses("Follow Harrison back to his seat", investigateHarrisonBottle, 0);
+    investigateHarrisonBottle->setDescription("When you followed Harrison back to his seat to check his belongings, you caught Harrison and Mika talking about something. You eavesdropped on them, and what you heard piqued your attention. After that, you quickly inspected Harrison's whiskey bottle.");
+    investigateHarrisonBottle->setChoiceses("Inspect the bottle", collectWhiskeyBottle, 0);
+    collectWhiskeyBottle->setDescription("The bottle suggests murder by liquor, but contains only plain alcohol.");
+    //Collect evidence 4, 7, 9
+    collectWhiskeyBottle->setChoiceses("Continue investigating.", investigatePassengers, 0);
+    investigatePassengers->setChoiceses("Alex", investigateAlexCoffee, 0);
+    investigateAlexCoffee->setDescription("When you approached Alex's seat, you heard Alex telling Clara that his coffee was drugged. When Clara left, you asked Alex to check his belongings and got his permission.");
+    investigateAlexCoffee->setChoiceses("Inspect Alex's cup of coffee.", collectAlexCoffee, 0);
+    collectAlexCoffee->setDescription("Traces of a fast-acting sedative prove Alex was awake and drugged, falsifying his 'jet-lag' alibi.");
+    collectAlexCoffee->setChoiceses("Search his bag for other evidence, if any.", inspectAlexBag, 0);
+    inspectAlexBag->setDescription("You had gotten his permission, so you might as well make use of it.\nYou searched his bag, and found a broken insulin pen.");
+    inspectAlexBag->setChoiceses("Inspect the pen and retrieve it for later investigation.", collectAlexPen, 0);
+    collectAlexPen->setDescription("A diabetic passenger's device, can be easily mistaken for the murder weapon.");
+    collectAlexPen->setChoiceses("Leave and go investigate other passengers.", eavesdropAlex, 0);
+    eavesdropAlex->setDescription("When you had gathered your evidence, you bid Alex a temporary goodbye. However, right when you turned away, Alex's voice rang from behind you. At first, you thought he was calling you, but then you realized his voice was very small, barely above a whisper, and if yours ears were not fooling you, it contained the words 'payback', 'kill'. You halted your footsteps and pretended to inspect the passenger cabin, while eavesdropping on Alex.");
+    eavesdropAlex->setChoiceses("Hear what Alex is saying.", getAnonymousNote, 0);
+    getAnonymousNote->setDescription("From Alex's tone, it seemed like he was reading from something, maybe a note. His voice was very small and was hard to hear. I'd need to find a way to retrieve that note from him.\n...\nFortunately, I didn't have to wait for long. After reading the note, Alex crumpled it up and threw it away, muttering 'Nonsense...'. He probably deemed the note a joke meant to scare him, and I wasted no time to pick it up. Ironically, were it not for the chaos in the passenger cabin caused by the murder, attendants would surely have stopped Alex from littering, and it would have been much harder for me to collect this evidence.");
+    getAnonymousNote->setChoiceses("Inspect the note.", collectAnonymousNote, 0);
+    collectAnonymousNote->setDescription("'Payback's a killer'. Generic and not linked to any suspect's handwriting.");
+    //Collect evidence 5, 11
+    collectAnonymousNote->setChoiceses("Continue investigating.", investigatePassengers, 0);
+    investigatePassengers->setChoiceses("Check security footage.", checkCam, 0);
+    checkCam->setDescription("You decided that you should request a security footage to check if there's anything abnormal happened before, during, and after the murder.\nIt turned out to be quite the smart idea, as the lavatory camera did indeed catch a person who shouldn't be there at that time.");
 
     //Key clues
     evidence* penOnVictor = new evidence();
@@ -93,7 +129,7 @@ int main() {
 
     evidence* threatNote = new evidence();
     threatNote->setName("Threatening Note under Harrison's Seat");
-    threatNote->setDescription("Hand-written: You ruined my life. Enjoy your last flight. Matches Harrison's handwriting.");
+    threatNote->setDescription("Hand-written: 'You ruined my life. Enjoy your last flight'. Matches Harrison's handwriting.");
     threatNote->setIDnumber(2);
     threatNote->setHasFound(false);
     harrisonToHoof->setDescription("(Harrison to Detective Hoof):\nHoof: Why did you write this note?\nHarrison: I didn't. My handwriting? Someone wants to frame me.");
@@ -107,10 +143,10 @@ int main() {
 
     evidence* lavaFootage = new evidence();
     lavaFootage->setName("Lavatory Security Footage");
-    lavaFootage->setDescription("Clara Voss is seen entering the lavatory 10 minutes before Victor-seems damning but she was actually ill.");
+    lavaFootage->setDescription("Clara Voss is seen entering the lavatory 10 minutes before Victor died-seems damning.");
     lavaFootage->setIDnumber(4);
     lavaFootage->setHasFound(false);
-    securityToHoof->setDescription("(Security Officer to Detective Hoof):\nOfficer: She went in before Victor-looked suspicious.\nHoof: Check her medical log. I bet she has an explanation.");
+    securityToHoof->setDescription("(Security Officer to Detective Hoof):\nOfficer: She went in before Victor died-looked suspicious.\nHoof: Check her medical log. I bet she has an explanation.");
 
     //False leads
     evidence* penAurora = new evidence();
@@ -122,7 +158,7 @@ int main() {
 
     evidence* insulinPen = new evidence();
     insulinPen->setName("Broken Insulin Pen in Alex's Bag");
-    insulinPen->setDescription("A diabetic passenger's device, mistaken at first for the murder weapon.");
+    insulinPen->setDescription("A diabetic passenger's device, can be easily mistaken for the murder weapon.");
     insulinPen->setIDnumber(6);
     insulinPen->setHasFound(false);
     alexToHoof->setDescription("(Alex to Detective Hoof):\nHoof: This pen was broken... possible murder weapon?\nAlex: It's just my insulin pen-broke this morning. Nothing more.");
@@ -136,10 +172,10 @@ int main() {
 
     evidence* anonymousNote = new evidence();
     anonymousNote->setName("Anonymous Typed Note on Alex's Coffee Cup");
-    anonymousNote->setDescription("Payback's a killer. Generic and not linked to any suspect's handwriting.");
+    anonymousNote->setDescription("'Payback's a killer'. Generic and not linked to any suspect's handwriting.");
     anonymousNote->setIDnumber(8);
     anonymousNote->setHasFound(false);
-    alexRead->setDescription("(Alex reading to himself):\nAlex (muttering): Payback's a killer... Who sent this?");
+    alexRead->setDescription("(Alex reading to himself, unaware that you wasn't far behind and was listening in):\nAlex (muttering): Payback's a killer... Who sent this?");
 
     evidence* teaBagMika = new evidence();
     teaBagMika->setName("Herbal Tea Bag on Mika's Trolley");
@@ -150,7 +186,7 @@ int main() {
 
     evidence* whiskeyBottle = new evidence();
     whiskeyBottle->setName("Whiskey Bottle near Harrison's Seat");
-    whiskeyBottle->setDescription("Suggests murder by liquor, but contains only plain alcohol.");
+    whiskeyBottle->setDescription("The bottle suggests murder by liquor, but contains only plain alcohol.");
     whiskeyBottle->setIDnumber(10);
     whiskeyBottle->setHasFound(false);
     harrisonToMika->setDescription("(Harrison to Mika):\nHarrison: That bottle? I poured it myself.\nMika: Thought it might be spiked... but it's clean.");
@@ -238,7 +274,7 @@ int main() {
         {
             whiskeyBottle->setHasFound(true);
             inventory.push_back(whiskeyBottle);
-            cout << "\nNEW EVIDENCE: You noticed " << whiskeyBottle->getName() << " and caught Harrison talking to Mika about it:\n " << harrisonToMika->getDescription() << endl;
+            cout << "\nNEW EVIDENCE: You noticed " << whiskeyBottle->getName() << " and eavesdropped Harrison talking to Mika about it:\n " << harrisonToMika->getDescription() << endl;
         }
         else if (currentStory.getDescription() == fingerprintFlute->getDescription())
         {
