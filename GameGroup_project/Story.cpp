@@ -89,13 +89,21 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 
 	cout << "The evidence you have collected so far: " << endl;
+	int displayCount = 0;
 	for (size_t i=0; i <inventory.size(); i++){
 		if(inventory[i]->getHasFound() == true){
-			for (size_t i = 0; i < inventory.size(); i++) {
-				cout << i + 1 << ". " << inventory[i]->getName() << endl;
-			}
+				cout << displayCount + 1 << ". " << inventory[i]->getName() << endl;
+				displayCount++;
 		}
 	}
+
+
+	if(displayCount < 2) {
+		cout << "You need at least two pieces of evidence to compare." << endl;
+		continuegame();
+		return;
+	}
+
 
 	int firstChoice = 0;
 	bool validFirstChoice = false;
@@ -132,7 +140,8 @@ void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 	if (*firstEvidence == *secondEvidence) {
 		result = firstEvidence->getIDnumber();
 		cout << "You have found the connection between the evidence." << endl;
-	
+		int Id = result + 10;
+		inventory[Id]->setHasFound(true);
 	}
 	else {
 		cout << "There is no connection between them." << endl;
