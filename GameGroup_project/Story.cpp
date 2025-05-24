@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Choices.h"
 #include <limits>
+#include <sstream>
 #include <cctype>
 using namespace std;
 
@@ -51,7 +52,8 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 	while (validInput == false) {
 		cout << "Enter your choice: ";
 		getline(cin,playerChoice);
-		
+			//For single choice scenario
+			
 			if (stoi(playerChoice) >= 1 && stoi(playerChoice) <= Choiceses.size()) {
 				validInput = true;
 				cout << "You selected option " << playerChoice << endl;
@@ -74,9 +76,12 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 
 		return *this;
 	}
+	
 
+	
 
 	// Return the next story based on the choice
+	
 	return *Choiceses[stoi(playerChoice) - 1].getNextStory();
 
 }
@@ -84,13 +89,21 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 
 	cout << "The evidence you have collected so far: " << endl;
+	int displayCount = 0;
 	for (size_t i=0; i <inventory.size(); i++){
 		if(inventory[i]->getHasFound() == true){
-			for (size_t i = 0; i < inventory.size(); i++) {
-				cout << i + 1 << ". " << inventory[i]->getName() << endl;
-			}
+				cout << displayCount + 1 << ". " << inventory[i]->getName() << endl;
+				displayCount++;
 		}
 	}
+
+
+	if(displayCount < 2) {
+		cout << "You need at least two pieces of evidence to compare." << endl;
+		continuegame();
+		return;
+	}
+
 
 	int firstChoice = 0;
 	bool validFirstChoice = false;
@@ -127,7 +140,8 @@ void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 	if (*firstEvidence == *secondEvidence) {
 		result = firstEvidence->getIDnumber();
 		cout << "You have found the connection between the evidence." << endl;
-	
+		int Id = result + 10;
+		inventory[Id]->setHasFound(true);
 	}
 	else {
 		cout << "There is no connection between them." << endl;
@@ -182,4 +196,22 @@ void Story::interrogate(const vector<evidence*>& inventory){
 	evidence* tempEvi = inventory[Choice - 1];
 
 	
+}
+
+
+void Story::continuegame() {
+	cout << "Press Enter to continue...";
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	cin.get();
+}
+
+void Story::printOnLine(const string& text, size_t width) {
+	stringstream words(text);
+
+	string word;
+	size_t lineLength = 0;
+
+	while(words >> word) {
+
+	}
 }
