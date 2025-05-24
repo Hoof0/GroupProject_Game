@@ -194,7 +194,7 @@ int main() {
     evidence* tornPhoto = new evidence();
     tornPhoto->setName("Torn Photo in Victor's Pocket");
     tornPhoto->setDescription("One half shows Victor with a young woman (Mika Sato) at a NovaTech gala; the other half is hidden in Mika's locket, which you have noticed when she served you water.");
-    tornPhoto->setIDnumber(1);
+    tornPhoto->setIDnumber(0);
     tornPhoto->setHasFound(false);
     hoofToMika->setDescription("(Detective Hoof to Mika Sato):\nHoof: Why was your photo half here, and the other half in your locket?\nMika: I don't know... Victor and I only met once. Someone must have planted it.");
 
