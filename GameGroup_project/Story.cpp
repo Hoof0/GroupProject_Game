@@ -53,10 +53,8 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 		cout << "Enter your choice: ";
 		getline(cin,playerChoice);
 			//For single choice scenario
-			if (playerChoice.size() == 1) {
-			continuegame();
-			}
-			else if (stoi(playerChoice) >= 1 && stoi(playerChoice) <= Choiceses.size()) {
+			
+			if (stoi(playerChoice) >= 1 && stoi(playerChoice) <= Choiceses.size()) {
 				validInput = true;
 				cout << "You selected option " << playerChoice << endl;
 			} else {

@@ -27,6 +27,8 @@ int main() {
     Story* mainEnding = new Story();
 
 
+    
+
     // filter for testing
     Story* filter = new Story();
 
@@ -83,6 +85,17 @@ int main() {
     Story* collectTeabag = new Story();
     Story* interrogatePassengers = new Story();
     Story* checkTestimony = new Story();
+
+    //Menu
+    Story* mainMenu = new Story();
+    Story* quitGame = new Story;
+    
+    quitGame->setDescription("Thanks for playing!");
+    mainMenu->setDescription("Welcome to the game!\n\n You are a detective, and your task is to solve the mystery of ...");
+    
+    mainMenu->setChoiceses("Start game.", filter, 0);
+    mainMenu->setChoiceses("Quit game." , quitGame, 0);
+
 
     filter->setDescription("This is a filter for testing.\n\n");
     filter->setChoiceses("You can choose to go back to the main menu or continue the game.", act1Scene, 0);
