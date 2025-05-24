@@ -3,6 +3,7 @@
 #include <iostream>
 #include "Choices.h"
 #include <limits>
+#include <sstream>
 #include <cctype>
 using namespace std;
 
@@ -51,8 +52,11 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 	while (validInput == false) {
 		cout << "Enter your choice: ";
 		getline(cin,playerChoice);
-		
-			if (stoi(playerChoice) >= 1 && stoi(playerChoice) <= Choiceses.size()) {
+			//For single choice scenario
+			if (playerChoice.size() == 1) {
+			continuegame();
+			}
+			else if (stoi(playerChoice) >= 1 && stoi(playerChoice) <= Choiceses.size()) {
 				validInput = true;
 				cout << "You selected option " << playerChoice << endl;
 			} else {
@@ -74,9 +78,12 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 
 		return *this;
 	}
+	
 
+	
 
 	// Return the next story based on the choice
+	
 	return *Choiceses[stoi(playerChoice) - 1].getNextStory();
 
 }
@@ -182,4 +189,22 @@ void Story::interrogate(const vector<evidence*>& inventory){
 	evidence* tempEvi = inventory[Choice - 1];
 
 	
+}
+
+
+void Story::continuegame() {
+	cout << "Press Enter to continue...";
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	cin.get();
+}
+
+void Story::printOnLine(const string& text, size_t width) {
+	stringstream words(text);
+
+	string word;
+	size_t lineLength = 0;
+
+	while(words >> word) {
+
+	}
 }

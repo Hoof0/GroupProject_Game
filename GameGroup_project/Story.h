@@ -26,6 +26,8 @@ public:
 	void interrogate(const vector<evidence*>& inventory);
 	void compareEvidence(const vector<evidence*>& inventory, int& result);
     void printInventory(const vector<evidence*>& inventory);	
+	void printOnLine(const string& text, size_t width);
+	void continuegame();
 	Story GetKeyPress(vector<evidence*>& inventory, int& result);
 	const vector<Choices>& getChoiceses() const;
 	void display(string nar, vector<Choices> ch);
