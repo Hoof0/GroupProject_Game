@@ -392,6 +392,14 @@ int main() {
     inventory.push_back(whiskeyBottle);
     inventory.push_back(fingerprintFlute);
     inventory.push_back(mikaMurder);
+    //Testimony check
+    bool Testify(){
+        for(size_t i = 0; i < inventory.size(); i++)
+        {
+            if (inventory[i]->get) 
+        }
+        return true;
+    }
     //Main game
     while (!currentStory.getEnding() && gameRunning) 
     {
@@ -402,6 +410,7 @@ int main() {
         string currentDescription = currentStory.getDescription();
         currentStory.printDescription();
         cout << endl;
+         
 
         //Dialogue snippets of characters with collected evidences
         if (currentStory.getDescription() == collectPen->getDescription())

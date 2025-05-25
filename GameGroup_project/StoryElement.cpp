@@ -1,6 +1,6 @@
 #include "StoryElement.h"
 
-int speed = 45;
+int speed = 5;
 
 string StoryElement::getDescription() const{
     return description;
@@ -11,7 +11,6 @@ void StoryElement::setDescription(string dsc){
 };
 
 void StoryElement::printDescription() const{
-<<<<<<< Updated upstream
     const int width = 80; // Adjust this based on your terminal width
     string word = "";
     int currentLineLength = 0;
@@ -56,13 +55,11 @@ void StoryElement::printDescription() const{
         } else {
             word += c; 
         }
-=======
     // Print text slowly
     for (char c : description){
         std::string description;
         std::cout << c << std::flush;
         this_thread::sleep_for(chrono::milliseconds(5));
->>>>>>> Stashed changes
     }
     
     cout << endl;
