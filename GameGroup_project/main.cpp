@@ -22,13 +22,13 @@ bool allEvidenceCollected(const vector<evidence*>& inventory) {
         return true; // All evidence has been found
 }
 
-bool Resolute(evidence*& yes) {;
-    if(!yes->getHasFound()){
-        return false;
-    }
-    
-    return true;
-    
+bool Resolute(const vector<evidence*>& inventory) {
+        for (size_t i = 0; i < inventory.size(); i++) {
+            if (i >= inventory.size() || !inventory[i]->getHasFound()) {
+                return false; // If any evidence is not found, return false
+            }
+        }
+        return true; // All evidence has been found
 }
 
 int main() {
@@ -506,8 +506,9 @@ int main() {
         }
 
         //Add resolute
-        if(mikaMurder->getHasFound())
+        if(Resolute(inventory))
         {
+        cout << "\nYou have chosen to be resolute in your investigation.\n";
         accuseMika->setChoiceses("Resolute.", compareMika,0);
         }
 
