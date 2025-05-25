@@ -22,6 +22,14 @@ bool allEvidenceCollected(const vector<evidence*>& inventory) {
         return true; // All evidence has been found
 }
 
+bool Resolute(evidence*& yes) {;
+    if(!yes->getHasFound()){
+        return false;
+    }
+    
+    return true;
+    
+}
 
 int main() {
     vector<evidence*> inventory;
@@ -235,7 +243,7 @@ int main() {
     accuseMika->setChoiceses("Review on the syringe pen.", reviewPenOnVictor, 0);
     accuseMika->setChoiceses("Review on the torn photo on Victor's body.", reviewTornPhoto, 0);
     accuseMika->setChoiceses("Compare evidence.", compareMika, 1);
-    accuseMika->setChoiceses("Resolute.", compareMika,0);
+
     accuseMika->setChoiceses("Your inventory have: ", inven, 2);
     reviewPenOnVictor->setDescription("Using the forensic lab kit you brought, you tested the pen, and received a positive result for aconite on the pen's tip, the same poison found on Victor's pillow. But you weren't sure if this was Mika's pen.\n...\nWait. Aurora also had the same pen. She and Mika were both attendants. If all attendants on this flight were given the same pen, then...");
     reviewPenOnVictor->setChoiceses("Cross-check with NovaTech and other attendants.", checkPenOnVictor, 0);
@@ -405,7 +413,6 @@ int main() {
     inventory.push_back(mikaMurder);
     //Check hasFound
 
-    
 
     //Main game
     while (!currentStory.getEnding() && gameRunning) 
@@ -498,13 +505,20 @@ int main() {
             cout << "\nNEW EVIDENCE: You found " << mikaMurder->getName();
         }
 
+        //Add resolute
+        if(mikaMurder->getHasFound())
+        {
+        accuseMika->setChoiceses("Resolute.", compareMika,0);
+        }
 
+        //inventory check
         if (allEvidenceCollected(inventory))
         {
         cout << "Now that you had collected all the evidence, it was time to confront each suspect for their testimony";
         investigatePassengers->setChoiceses("Interrogate", interrogatePassengers, 0);
         }
-
+        
+       
         
         // Display choices
         currentStory.display(currentStory.getDescription(), currentStory.getChoiceses());
