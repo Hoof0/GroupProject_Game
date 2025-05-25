@@ -22,14 +22,7 @@ bool allEvidenceCollected(const vector<evidence*>& inventory) {
         return true; // All evidence has been found
 }
 
-bool Resolute(const vector<evidence*>& inventory) {
-        for (size_t i = 0; i < inventory.size(); i++) {
-            if (i >= inventory.size() || !inventory[i]->getHasFound()) {
-                return false; // If any evidence is not found, return false
-            }
-        }
-        return true; // All evidence has been found
-}
+
 
 int main() {
     vector<evidence*> inventory;
@@ -243,6 +236,7 @@ int main() {
     accuseMika->setChoiceses("Review on the syringe pen.", reviewPenOnVictor, 0);
     accuseMika->setChoiceses("Review on the torn photo on Victor's body.", reviewTornPhoto, 0);
     accuseMika->setChoiceses("Compare evidence.", compareMika, 1);
+
 
     accuseMika->setChoiceses("Your inventory have: ", inven, 2);
     reviewPenOnVictor->setDescription("Using the forensic lab kit you brought, you tested the pen, and received a positive result for aconite on the pen's tip, the same poison found on Victor's pillow. But you weren't sure if this was Mika's pen.\n...\nWait. Aurora also had the same pen. She and Mika were both attendants. If all attendants on this flight were given the same pen, then...");
@@ -503,12 +497,7 @@ int main() {
             cout << "\nNEW EVIDENCE: You found " << mikaMurder->getName();
         }
 
-        //Add resolute
-        if (Resolute(inventory))
-        {
-        cout << "\nYou have chosen to be resolute in your investigation.\n";
-        accuseMika->setChoiceses("Resolute.", confrontMika, 0);
-        }
+
 
         //inventory check
         if (allEvidenceCollected(inventory))
