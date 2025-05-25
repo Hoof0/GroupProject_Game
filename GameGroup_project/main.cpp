@@ -392,14 +392,16 @@ int main() {
     inventory.push_back(whiskeyBottle);
     inventory.push_back(fingerprintFlute);
     inventory.push_back(mikaMurder);
-    //Testimony check
-    bool Testify(){
-        for(size_t i = 0; i < inventory.size(); i++)
-        {
-            if (inventory[i]->get) 
+    //Check hasFound
+    //Function to check if all evidence has been collected
+    bool allEvidenceCollected(const vector<evidence*>& inventory); {
+        for (const auto& item : inventory) {
+            if (!item->getHasFound()) {
+                return false; // If any evidence is not found, return false
+            }
         }
-        return true;
-    }
+        return true; // All evidence has been found
+    };
     //Main game
     while (!currentStory.getEnding() && gameRunning) 
     {
@@ -485,7 +487,7 @@ int main() {
             
             cout << "\nNEW EVIDENCE: You found " << fingerprintFlute->getName() << " and confronted Aurora and Mika about it:\n " << auroraToMikaFlute->getDescription() << endl;
         }
-        else if (currentStory.getDescription() == investigatePassengers->getDescription() && )
+        else if (currentStory.getDescription() == investigatePassengers->getDescription() && allEvidenceCollected(inventory))
         {
         cout << "Now that you had collected all the evidence, it was time to confront each suspect for their testimony";
         investigatePassengers->setChoiceses("Interrogate", interrogatePassengers, 0);

@@ -63,4 +63,5 @@ void StoryElement::printDescription() const{
     }
     
     cout << endl;
+}
 };
