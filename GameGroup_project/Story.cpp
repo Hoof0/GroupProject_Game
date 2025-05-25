@@ -90,9 +90,11 @@ void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 
 	cout << "The evidence you have collected so far: " << endl;
 	int displayCount = 0;
+	vector<int> availableIndices; // Track actual indices of found evidence
 	for (size_t i=0; i <inventory.size(); i++){
 		if(inventory[i]->getHasFound() == true){
 				cout << displayCount + 1 << ". " << inventory[i]->getName() << endl;
+				availableIndices.push_back(i);
 				displayCount++;
 		}
 	}
@@ -111,7 +113,7 @@ void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 		cout << "Select the first evidence to compare: ";
 		cin >> firstChoice;
 
-		if (firstChoice >= 1 && firstChoice <= inventory.size() && inventory[firstChoice - 1]->getHasFound() == true) {
+		if (firstChoice >= 1 && firstChoice <= displayCount) {
 			validFirstChoice = true;
 		}
 		else {
@@ -123,7 +125,7 @@ void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 	while (validSecondChoice == false) {
 		cout << "Select your second evidence to compare: ";
 		cin >> secondChoice;
-		if (secondChoice >= 1 && secondChoice <= inventory.size() && inventory[secondChoice - 1]->getHasFound() == true) {
+		if (secondChoice >= 1 && secondChoice <= displayCount && firstChoice != secondChoice) {
 			validSecondChoice = true;
 		}
 		else if (firstChoice == secondChoice) {
@@ -134,14 +136,18 @@ void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 		}
 	}
 
-	evidence* firstEvidence = inventory[firstChoice - 1];
-	evidence* secondEvidence = inventory[secondChoice - 1];
+	evidence* firstEvidence = inventory[availableIndices[firstChoice - 1]];
+	evidence* secondEvidence = inventory[availableIndices[secondChoice - 1]];
 
 	if (*firstEvidence == *secondEvidence) {
 		result = firstEvidence->getIDnumber();
 		cout << "You have found the connection between the evidence." << endl;
-		int Id = result + 10;
-		inventory[Id]->setHasFound(true);
+		for (size_t i = 0; i < inventory.size(); i++) {
+			if (inventory[i]->getIDnumber() == 10 && !inventory[i]->getHasFound()) {
+				// This is the combined evidence (Mika's murder proof)
+				inventory[i]->setHasFound(true);
+				cout << "NEW EVIDENCE UNLOCKED: " << inventory[i]->getName() << endl;
+				break; } }
 	}
 	else {
 		cout << "There is no connection between them." << endl;
@@ -156,13 +162,11 @@ void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 void Story::printInventory(const vector<evidence*>& inventory){
 	
 	cout << "The evidence you have collected so far: " << endl;
-	for (size_t i=0; i <inventory.size(); i++){
-		if(inventory[i]->getHasFound() == true){
-			for (size_t i = 0; i < inventory.size(); i++) {
-				cout << i + 1 << ". " << inventory[i]->getName() << endl;
-			}
-		}
-	}
+	for (size_t i = 0; i < inventory.size(); i++){
+    if(inventory[i]->getHasFound() == true){
+        cout << i + 1 << ". " << inventory[i]->getName() << endl;
+    }
+}
 
 	cout << "\nPress Enter to continue...";
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -179,13 +183,13 @@ void Story::interrogate(const vector<evidence*>& inventory){
 		}
 	}
 
-	int Choice = 0;
+	string Choice = "0";
 	bool validFirstChoice = false;
 	while (validFirstChoice == false) {
 		cout << "Select the first evidence to compare: ";
-		cin >> Choice;
+		getline(cin,Choice);
 
-		if (Choice >= 1 && Choice <= inventory.size() && inventory[Choice - 1]->getHasFound() == true) {
+		if (stoi(Choice) >= 1 && stoi(Choice) <= inventory.size() && inventory[stoi(Choice) - 1]->getHasFound() == true) {
 			validFirstChoice = true;
 		}
 		else {
@@ -193,7 +197,7 @@ void Story::interrogate(const vector<evidence*>& inventory){
 		}
 	}
 
-	evidence* tempEvi = inventory[Choice - 1];
+	evidence* tempEvi = inventory[stoi(Choice) - 1];
 
 	
 }
