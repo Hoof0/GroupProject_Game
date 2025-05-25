@@ -492,17 +492,20 @@ int main() {
             
             cout << "\nNEW EVIDENCE: You found " << fingerprintFlute->getName() << " and confronted Aurora and Mika about it:\n " << auroraToMikaFlute->getDescription() << endl;
         }
-        else if (currentStory.getDescription() == investigatePassengers->getDescription() && allEvidenceCollected(inventory))
-        {
-        cout << "Now that you had collected all the evidence, it was time to confront each suspect for their testimony";
-        investigatePassengers->setChoiceses("Interrogate", interrogatePassengers, 0);
-        }
         else if (currentStory.getDescription() == mikaMurder->getDescription())
         {
             mikaMurder->setHasFound(true);
             cout << "\nNEW EVIDENCE: You found " << mikaMurder->getName();
         }
 
+
+        if (allEvidenceCollected(inventory))
+        {
+        cout << "Now that you had collected all the evidence, it was time to confront each suspect for their testimony";
+        investigatePassengers->setChoiceses("Interrogate", interrogatePassengers, 0);
+        }
+
+        
         // Display choices
         currentStory.display(currentStory.getDescription(), currentStory.getChoiceses());
         
