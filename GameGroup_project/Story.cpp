@@ -209,14 +209,3 @@ void Story::continuegame() {
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cin.get();
 }
-
-void Story::printOnLine(const string& text, size_t width) {
-	stringstream words(text);
-
-	string word;
-	size_t lineLength = 0;
-
-	while(words >> word) {
-
-	}
-}
