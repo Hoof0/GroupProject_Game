@@ -31,9 +31,7 @@ int main() {
     Story* act1Choice2 = new Story();
     Story* act1End = new Story();
 
-    //Main game
-    Story currentStory = *act1Scene;
-    bool gameRunning = true;
+    
 
     //evidence
     Story* hoofToMika = new Story();
@@ -325,6 +323,9 @@ int main() {
 
 
     // Main game loop
+    //Main game
+    Story currentStory = *act1Scene;
+    bool gameRunning = true;
     //Main game
     while (!currentStory.getEnding() && gameRunning) 
     {
