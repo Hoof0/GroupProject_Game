@@ -58,7 +58,7 @@ Story Story::GetKeyPress(vector<evidence*>& inventory, int& result)
 				validInput = true;
 				cout << "You selected option " << playerChoice << endl;
 			} else {
-				cout << "Invalid choice. Please choose between 1 and " << Choiceses.size() << "." << endl;
+				cout << "Invalid choice. Please choose between 1 and " << Choiceses.size() << "; or press any non-number button to exit the game." << endl;
 			}
 		}
 
@@ -115,7 +115,7 @@ void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 			validFirstChoice = true;
 		}
 		else {
-			cout << "Invalid choice. Please choose between 1 and " << inventory.size() << "." << endl;
+			cout << "Invalid choice. Please choose between 1 and " << inventory.size() << "; or press any non-number button to exit the game." << endl;
 		}
 	}
 	int secondChoice = 0;
@@ -130,7 +130,7 @@ void Story::compareEvidence(const vector<evidence*>& inventory, int& result){
 			cout << "You can't select the same evidence. Please choose a different one." << endl;
 		}
 		else {
-			cout << "Invalid choice. Please choose between 1 and " << inventory.size() << "." << endl;
+			cout << "Invalid choice. Please choose between 1 and " << inventory.size() << "; or press any non-number button to exit the game." << endl;
 		}
 	}
 
@@ -189,7 +189,7 @@ void Story::interrogate(const vector<evidence*>& inventory){
 			validFirstChoice = true;
 		}
 		else {
-			cout << "Invalid choice. Please choose between 1 and " << inventory.size() << "." << endl;
+			cout << "Invalid choice. Please choose between 1 and " << inventory.size() << "; or press any non-number button to exit the game." << endl;
 		}
 	}
 
