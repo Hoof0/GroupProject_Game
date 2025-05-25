@@ -7,7 +7,7 @@ using namespace std;
 
 class StoryElement {
 private:   
-    string description;
+    std::string description;
 public:
     StoryElement(string dsc = ""){
         description = dsc;
