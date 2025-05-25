@@ -237,10 +237,10 @@ int main() {
     act3Investigation->setDescription("You knew for a fact that one of the passengers and attendants was the murderer. From the evidence and testimonies above, you decided to accuse...");
     act3Investigation->setChoiceses("Mika.", accuseMika, 0);
     act3Investigation->setChoiceses("Your inventory have: ", inven, 2);
+    act3Investigation->setChoiceses("Compare evidence.", act3Investigation, 1);
     accuseMika->setDescription("Mika looked suspicious. I'd check the syringe pen and torn photo for further investigation.");
     accuseMika->setChoiceses("Review on the syringe pen.", reviewPenOnVictor, 0);
     accuseMika->setChoiceses("Review on the torn photo on Victor's body.", reviewTornPhoto, 0);
-    accuseMika->setChoiceses("Compare evidence.", compareMika, 1);
     accuseMika->setChoiceses("Resolute.", confrontMika, 0);
 
     accuseMika->setChoiceses("Your inventory have: ", inven, 2);
