@@ -12,6 +12,17 @@ void clearScreen(){
     cout << "\033[2J\033[1;1H";
 }
 
+//Function to check if all evidence has been collected
+bool allEvidenceCollected(const vector<evidence*>& inventory) {
+        for (const auto& item : inventory) {
+            if (!item->getHasFound()) {
+                return false; // If any evidence is not found, return false
+            }
+        }
+        return true; // All evidence has been found
+}
+
+
 int main() {
     vector<evidence*> inventory;
     int evidenceConnectionResult;
@@ -393,15 +404,9 @@ int main() {
     inventory.push_back(fingerprintFlute);
     inventory.push_back(mikaMurder);
     //Check hasFound
-    //Function to check if all evidence has been collected
-    bool allEvidenceCollected(const vector<evidence*>& inventory); {
-        for (const auto& item : inventory) {
-            if (!item->getHasFound()) {
-                return false; // If any evidence is not found, return false
-            }
-        }
-        return true; // All evidence has been found
-    };
+
+    
+
     //Main game
     while (!currentStory.getEnding() && gameRunning) 
     {
