@@ -112,6 +112,7 @@ int main() {
   
     act1Choice1->setDescription("(You kneel beside Victor, noticing the syringe-pen's NovaTech branding and a faint bitter almond smell-aconite. Victor was poisoned. Proceed to the mystery.)");
     act1Choice2->setDescription("(You retreat to your seat, put on noise-canceling headphones, and mutter: MY PRECIOUS HOLIDAY.)\n");
+    act1Choice2->setChoiceses("You wait for the flight to end...",act1End,0);
 
     act1Scene->setChoiceses("investigate the body.", act1Choice1, 0);
     act1Scene->setChoiceses("Not my problem. I'm on holiday.", act1Choice2, 0);
@@ -374,7 +375,7 @@ int main() {
 
     // Main game loop
     //Main game
-    Story currentStory = *menu;
+    Story currentStory = *act1Scene;
     bool gameRunning = true;
     
     //Inventory
@@ -475,7 +476,7 @@ int main() {
             
             cout << "\nNEW EVIDENCE: You found " << fingerprintFlute->getName() << " and confronted Aurora and Mika about it:\n " << auroraToMikaFlute->getDescription() << endl;
         }
-        else if (currentStory.getDescription() == investigatePassengers->getDescription() && inventory.size() >= 12)
+        else if (currentStory.getDescription() == investigatePassengers->getDescription() && )
         {
         cout << "Now that you had collected all the evidence, it was time to confront each suspect for their testimony";
         investigatePassengers->setChoiceses("Interrogate", interrogatePassengers, 0);
