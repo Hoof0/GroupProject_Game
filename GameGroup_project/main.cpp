@@ -268,6 +268,7 @@ int main() {
     reviewAuroraPen->setDescription("Aurora's pen was, as she said, completely clean. The forensic lab kit you brought couldn't find any traces on it. However, the real headache came when the kit's test results pointed out that poison residue on the flute predated fingerprint deposition, meaning that someone set Aurora up.\nIt seemed I've hit a dead end. I'd have to return the pen to Aurora, and informed her that she was innocent.");
     reviewAuroraPen->setChoiceses("Fail to solve the case.", badEnd, 0);
     badEnd->setDescription("You wasted too much time on a wrong lead, and before you could catch the real murderer, the plane had landed. Police barged in and took the matter into their hand.\nYou were sure that they could found out the true murderer, but you had no business with the case anymore.\nWell, this was not exactly a loss on your behalf, but it was surely a stain in your detective career, and a huge blow to your ego. May you find success in your next adventures.");
+    badEnd->setEnding(true);
     
     //False path 2 (Alex)
     act3Investigation->setChoiceses("Alex.", accuseAlex, 0);
@@ -276,6 +277,7 @@ int main() {
     accuseAlex->setChoiceses("Your inventory have: ", inven, 2);
     reviewInsulinPen->setDescription("The insulin pen could be the murder weapon. It can be used to store aconite.\n\nHowever, when tested with the forensic lab kit I brought, the results were negative. The pen was just a normal insulin pen. Alex also displayed some symptoms of diabetes like drinking lots of water and going to the toilet multiple times.\nHuh, guess he was just a poor patient.\nIt seemed this wasn't the right path.");
     reviewInsulinPen->setChoiceses("Fail to solve the case.", badEnd, 0);
+    badEnd->setEnding(true);
 
     //False path 3 (Clara)
     act3Investigation->setChoiceses("Clara.", accuseClara, 0);
@@ -284,6 +286,7 @@ int main() {
     accuseClara->setChoiceses("Your inventory have: ", inven, 2);
     reviewCam->setDescription("It was completely normal to go to the lavatory, but Clara's timing was a bit too convenient. She could have come to the lavatory to prepare the weapon, and returned afterwards to clean all the traces that could expose her. I'd confront her about this.\n...\n...\nRight before I was about to interrogate Clara, the Security Officer came back with her medical logs, which I had told him to retrieved before. It confirmed that Clara was indeed ill.\nThe forensic lab kit I brought also found no traces of aconite in the lavatory.\nIt seemed I was stuck.");
     reviewCam->setChoiceses("Fail to solve the case.", badEnd, 0);
+    badEnd->setEnding(true);
 
     //False path 4 (Harrison)
     act3Investigation->setChoiceses("Harrison.", accuseHarrison, 0);
@@ -292,6 +295,7 @@ int main() {
     accuseHarrison->setChoiceses("Your inventory have: ", inven, 2);
     reviewNote->setDescription("The handwriting on the note matched Harrison's. It was definitely him who wrote this note.\nI came back to Harrison's seat and requested to search his belongings once more. He looked quite annoyed, but allowed me nonetheless.\nWhile searching his briefcase, I found no poison, but a lot of notes. Harrison seemed like the type to write everything he thought of down on his notes. The notes, including the threatening one, were all identical in shape and size. They probably came from the same notebook.\n\nWell, I found that notebook at the bottom of the briefcase. Many pages were torn down, and the remaining ones were also full of words. I tried to read some of them, and saw that their topics vary, from meeting schedules to lists of recommended restaurant. I even found another note with threatening words. It seemed Harrison liked to write notes for all the situations, including ones yet to happen. No wonder he forgot about them and thought that his threatening note was a prank of another person.\n\nTurned out, Harrison wasn't the murderer.");
     reviewNote->setChoiceses("Fail to solve the case.", badEnd, 0);
+    badEnd->setEnding(true);
 
     //Key clues
     evidence* penOnVictor = new evidence();
