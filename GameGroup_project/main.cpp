@@ -242,7 +242,7 @@ int main() {
     accuseMika->setDescription("Mika looked suspicious. I'd check the syringe pen and torn photo for further investigation.");
     accuseMika->setChoiceses("Review on the syringe pen.", reviewPenOnVictor, 0);
     accuseMika->setChoiceses("Review on the torn photo on Victor's body.", reviewTornPhoto, 0);
-    accuseMika->setChoiceses("Compare evidence.", act3Investigation, 1);
+    accuseMika->setChoiceses("Compare evidence.", compareMika, 1);
 
     accuseMika->setChoiceses("Your inventory have: ", inven, 2);
     reviewPenOnVictor->setDescription("Using the forensic lab kit you brought, you tested the pen, and received a positive result for aconite on the pen's tip, the same poison found on Victor's pillow. But you weren't sure if this was Mika's pen.\n...\nWait. Aurora also had the same pen. She and Mika were both attendants. If all attendants on this flight were given the same pen, then...");
@@ -255,8 +255,6 @@ int main() {
     reviewTornPhoto->setChoiceses("Find Mika's weapon.", accuseMika, 0);
     reviewTornPhoto->setChoiceses("Your inventory have: ", inven, 2);
     compareMika->setDescription("A solid proof combined from Mika's weapon and motive, showing that she killed Victor.");
-    compareMika->setChoiceses("Confront Mika with your evidence.", confrontMika, 0);
-    compareMika->setChoiceses("Your inventory have: ", inven, 2);
     confrontMika->setDescription("Hoof Kaslei: Where's your pen, Mika?\nMika: I lost it during the chaos. Wh...What of it?\nHoof Kaslei:\n(showing her the pen)\nI found it. Near Victor's body.\nMika:\n(face paling rapidly)\nM...Maybe I dropped it there.\n\nHoof Kaslei:\n(showing Mika the torn photo)\nYour locket contains the other half of this photo - do you recognize him?\nMika: He… he was my mentor. But I didn't kill him!\n\nKaslei: Poison in your pen, motive from the photo—explain yourself.\nMika (breaking down): It was justice… he betrayed me years ago. I...I had to stop him.\n\n\nYou had found out the murderer and handed her and the evidence to the police when the airplane landed.\n\nYOU SOLVED THE CASE. CONGRATULATIONS.");
     confrontMika->setEnding(true);
 
@@ -509,7 +507,7 @@ int main() {
         if (Resolute(inventory))
         {
         cout << "\nYou have chosen to be resolute in your investigation.\n";
-        act3Investigation->setChoiceses("Resolute.", compareMika, 0);
+        accuseMika->setChoiceses("Resolute.", confrontMika, 0);
         }
 
         //inventory check
