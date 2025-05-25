@@ -506,10 +506,10 @@ int main() {
         }
 
         //Add resolute
-        if(Resolute(inventory))
+        if (Resolute(inventory))
         {
         cout << "\nYou have chosen to be resolute in your investigation.\n";
-        accuseMika->setChoiceses("Resolute.", compareMika,0);
+        accuseMika->setChoiceses("Resolute.", compareMika, 0);
         }
 
         //inventory check
