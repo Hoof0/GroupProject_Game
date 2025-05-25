@@ -125,13 +125,13 @@ int main() {
     menu->setChoiceses("Inspect the pen.", collectPen, 0);
 
     //Menu
-    act1Scene->setDescription("Captain (Intercom):\nFinorza Flight 77F to Tokyo, arriving ahead of schedule. Enjoy the flight\n\nIn the first class cabin...\n\nHoof Kaslei (Player):\n(sigh)\nIt has been so long since I had the time for such a wonderful vacation.\n Though, if any unfortunate thing happens, I might just hide myself and not interfere...\n At least...\n\nMika Sato:\n(approaching you with a polished smile)\nChampagne, Mr. Kaslei? Or… water?\n(A NovaTech syringe-pen slips from her trolley.)\nHoof Kaslei:\n(grunts, stowing his briefcase under the seat)\nJust water, and save the chatter.\n\nMika Sato (noticing Alex’s trembling hands):\n\nI’ll bring you a blanket, sir.\n\nClara Voss (coldly):\n\nTell Victor I don't want his drink.\n\nHarrison Gray:\n(slams the notebook shut, revealing a crumpled photo of Victor)\nWhat I need is for this flight to land. Before I-\n\nMika Sato:\n(gently replaces his glass)\nSome things are best served cold, Mr. Gray.\n\nThe flight is getting a bit too long. You decided to go to the restroom for some... personal stuff... Then, something caught your attention...\n\nAurora Antonae (to Mika, mocking):\nStill clinging to that? Sentimentality's a liability, senpai.\n\nAurora (blocking your way):\nThe lavatory lock jams. Wouldn't want you... trapped.\n(Adjust her glove, revealing a scar.)\n\nMika Sato:\n(hissing to Aurora)\nWhy provoke him? He's harmless.\n\nAurora Antonae:\n(snorting)\nHarmless? Rich brats like him are fleas. But don't worry-I'll keep him too distracted to notice your... projects.\n\nYou enter the lavatory and look around, without any care regarding what you have just heard.\n\nHoof Kaslei: That damn woman... Well, it's better for me though, I do NOT want to deal with any drama on my holiday, MY PRECIOUS HOLIDAY.\n\nJust as you were grunting about the insufferable attendants, you hear a loud scream.\n\nFlight Attendant: HE'S DEAD!!!!!\n\nYou rush towards the source of the scream.\n\nAurora(smirking):\n\nRefill, Mr. Kaslei? Might be your last chance before we all die horribly.\n\n(The captain's voice booms over the intercom: REMAIN CALM. WE ARE DIVERTING TO THE NEAREST AIRPORT. you stare at Victor's body, the syringe-pen, and the chaos around him.)\n\nPlayer Choice:");
+    act1Scene->setDescription("Captain (Intercom):\nFinorza Flight 77F to Tokyo, arriving ahead of schedule. Enjoy the flight.\n\nIn the first class cabin...\n\nHoof Kaslei (Player):\n(sigh)\nIt has been so long since I had the time for such a wonderful vacation.\n Though, if any unfortunate thing happens, I might just hide myself and not interfere...\n At least...\n\nMika Sato:\n(approaching you with a polished smile)\nChampagne, Mr. Kaslei? Or... water?\n(A NovaTech syringe-pen slips from her trolley.)\nHoof Kaslei:\n(grunts, stowing his briefcase under the seat)\nJust water, and save the chatter.\n\nMika Sato (noticing Alex's trembling hands):\n\nI'll bring you a blanket, sir.\n\nClara Voss (coldly):\n\nTell Victor I don't want his drink.\n\nHarrison Gray:\n(slams the notebook shut, revealing a crumpled photo of Victor)\nWhat I need is for this flight to land. Before I-\n\nMika Sato:\n(gently replaces his glass)\nSome things are best served cold, Mr. Gray.\n\nThe flight is getting a bit too long. You decided to go to the restroom for some... personal stuff... Then, something caught your attention...\n\nAurora Antonae (to Mika, mocking):\nStill clinging to that? Sentimentality's a liability, senpai.\n\nAurora (blocking your way):\nThe lavatory lock jams. Wouldn't want you... trapped.\n(Adjust her glove, revealing a scar.)\n\nMika Sato:\n(hissing to Aurora)\nWhy provoke him? He's harmless.\n\nAurora Antonae:\n(snorting)\nHarmless? Rich brats like him are fleas. But don't worry-I'll keep him too distracted to notice your... projects.\n\nYou enter the lavatory and look around, without any care regarding what you have just heard.\n\nHoof Kaslei: That damn woman... Well, it's better for me though, I do NOT want to deal with any drama on my holiday, MY PRECIOUS HOLIDAY.\n\nJust as you were grunting about the insufferable attendants, you hear a loud scream.\n\nFlight Attendant: HE'S DEAD!!!!!\n\nYou rush towards the source of the scream.\n\nAurora(smirking):\n\nRefill, Mr. Kaslei? Might be your last chance before we all die horribly.\n\n(The captain's voice booms over the intercom: REMAIN CALM. WE ARE DIVERTING TO THE NEAREST AIRPORT. you stare at Victor's body, the syringe-pen, and the chaos around him.)\n\nPlayer Choice:");
   
     act1Choice1->setDescription("(You kneel beside Victor, noticing the syringe-pen's NovaTech branding and a faint bitter almond smell-aconite. Victor was poisoned. Proceed to the mystery.)");
     act1Choice2->setDescription("(You retreat to your seat, put on noise-canceling headphones, and mutter: MY PRECIOUS HOLIDAY.)\n");
     act1Choice2->setChoiceses("You wait for the flight to end...",act1End,0);
 
-    act1Scene->setChoiceses("investigate the body.", act1Choice1, 0);
+    act1Scene->setChoiceses("Investigate the body.", act1Choice1, 0);
     act1Scene->setChoiceses("Not my problem. I'm on holiday.", act1Choice2, 0);
     act1Scene->setChoiceses("Your inventory have: ", inven, 2);
 
@@ -139,8 +139,6 @@ int main() {
     act1End->setEnding(true);
 
     //act 2
-    //act 3 test
-    investigatePassengers->setChoiceses("Move to act 3 immediately", act3Investigation,0);
     //Collect evidence 1, 2
     act1Choice1->setChoiceses("Inspect the pen.", collectPen, 0);
     act1Choice1->setChoiceses("Your inventory have: ", inven, 2);
@@ -254,7 +252,7 @@ int main() {
     reviewTornPhoto->setChoiceses("Find Mika's weapon.", accuseMika, 0);
     reviewTornPhoto->setChoiceses("Your inventory have: ", inven, 2);
     compareMika->setDescription("A solid proof combined from Mika's weapon and motive, showing that she killed Victor.");
-    confrontMika->setDescription("Hoof Kaslei: Where's your pen, Mika?\nMika: I lost it during the chaos. Wh...What of it?\nHoof Kaslei:\n(showing her the pen)\nI found it. Near Victor's body.\nMika:\n(face paling rapidly)\nM...Maybe I dropped it there.\n\nHoof Kaslei:\n(showing Mika the torn photo)\nYour locket contains the other half of this photo - do you recognize him?\nMika: He… he was my mentor. But I didn't kill him!\n\nKaslei: Poison in your pen, motive from the photo—explain yourself.\nMika (breaking down): It was justice… he betrayed me years ago. I...I had to stop him.\n\n\nYou had found out the murderer and handed her and the evidence to the police when the airplane landed.\n\nYOU SOLVED THE CASE. CONGRATULATIONS.");
+    confrontMika->setDescription("Hoof Kaslei: Where's your pen, Mika?\nMika: I lost it during the chaos. Wh...What of it?\nHoof Kaslei:\n(showing her the pen)\nI found it. Near Victor's body.\nMika:\n(face paling rapidly)\nM...Maybe I dropped it there.\n\nHoof Kaslei:\n(showing Mika the torn photo)\nYour locket contains the other half of this photo - do you recognize him?\nMika: He... he was my mentor. But I didn't kill him!\n\nKaslei: Poison in your pen, motive from the photo-explain yourself.\nMika (breaking down): It was justice... he betrayed me years ago. I...I had to stop him.\n\n\nYou had found out the murderer and handed her and the evidence to the police when the airplane landed.\n\nYOU SOLVED THE CASE. CONGRATULATIONS.");
     confrontMika->setEnding(true);
 
     //False path 1 (Aurora)
@@ -508,7 +506,7 @@ int main() {
         //inventory check
         if (allEvidenceCollected(inventory))
         {
-        cout << "Now that you had collected all the evidence, it was time to confront each suspect for their testimony";
+        cout << "Now that you had collected all the evidence, it was time to confront each suspect for their testimony.\n\n";
         investigatePassengers->setChoiceses("Interrogate", interrogatePassengers, 0);
         }
         

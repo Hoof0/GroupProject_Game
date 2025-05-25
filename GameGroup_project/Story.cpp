@@ -205,7 +205,7 @@ void Story::interrogate(const vector<evidence*>& inventory){
 
 
 void Story::continuegame() {
-	cout << "Press Enter to continue...";
+	cout << "Press Enter twice to continue...";
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');
 	cin.get();
 }

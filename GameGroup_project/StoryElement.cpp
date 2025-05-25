@@ -11,7 +11,7 @@ void StoryElement::setDescription(string dsc){
 };
 
 void StoryElement::printDescription() const{
-    /*const int LineLength = 80; // Set the line length for text wrapping
+    const int LineLength = 80; // Set the line length for text wrapping
     string word = "";
     int currentLineLength = 0;
 
@@ -20,8 +20,8 @@ void StoryElement::printDescription() const{
     for (char c : description){
         std::string description;
         std::cout << c << std::flush;
-        this_thread::sleep_for(chrono::milliseconds(1));
-    }*/
+        this_thread::sleep_for(chrono::milliseconds(20));
+    }
     cout << description;
     std::cout << std::endl;
 };
