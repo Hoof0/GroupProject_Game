@@ -14,8 +14,8 @@ void clearScreen(){
 
 //Function to check if all evidence has been collected
 bool allEvidenceCollected(const vector<evidence*>& inventory) {
-        for (const auto& item : inventory) {
-            if (!item->getHasFound()) {
+        for (size_t i = 0; i < 12; i++) {
+            if (i >= inventory.size() || !inventory[i]->getHasFound()) {
                 return false; // If any evidence is not found, return false
             }
         }
