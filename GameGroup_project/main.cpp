@@ -377,6 +377,21 @@ int main() {
     //Main game
     Story currentStory = *menu;
     bool gameRunning = true;
+    
+    //Inventory
+    inventory.push_back(threatNote);
+    inventory.push_back(sedativeCoffee);
+    inventory.push_back(lavaFootage);
+    inventory.push_back(penOnVictor);
+    inventory.push_back(tornPhoto);
+    inventory.push_back(penAurora);
+    inventory.push_back(insulinPen);
+    inventory.push_back(partyPhoto);
+    inventory.push_back(anonymousNote);
+    inventory.push_back(teaBagMika);
+    inventory.push_back(whiskeyBottle);
+    inventory.push_back(fingerprintFlute);
+    inventory.push_back(mikaMurder);
     //Main game
     while (!currentStory.getEnding() && gameRunning) 
     {
@@ -392,73 +407,73 @@ int main() {
         if (currentStory.getDescription() == collectPen->getDescription())
         {
             penOnVictor->setHasFound(true);
-            inventory.push_back(penOnVictor);
+            
             cout << "\nNEW EVIDENCE: You noticed " << penOnVictor->getName() << endl;
         }
         else if (currentStory.getDescription() == collectTornPhoto->getDescription())
         {
             tornPhoto->setHasFound(true);
-            inventory.push_back(tornPhoto);
+            
             cout << "\nNEW EVIDENCE: You found " << tornPhoto->getName() << " and went to ask Mika about it:\n " << hoofToMika->getDescription() << endl;
         }
         else if (currentStory.getDescription() == threatNote->getDescription())
         {
             threatNote->setHasFound(true);
-            inventory.push_back(threatNote);
+            
             cout << "\nNEW EVIDENCE: You found " << threatNote->getName() << " and confronted Harrison about it:\n " << harrisonToHoof->getDescription() << endl;
         }
         else if (currentStory.getDescription() == sedativeCoffee->getDescription())
         {
             sedativeCoffee->setHasFound(true);
-            inventory.push_back(sedativeCoffee);
+            
             cout << "\nNEW EVIDENCE: You found out " << sedativeCoffee->getName() << " and heard Alex and Clara talked about it:\n " << alexToClara->getDescription() << endl;
         }
         else if (currentStory.getDescription() == lavaFootage->getDescription())
         {
             lavaFootage->setHasFound(true);
-            inventory.push_back(lavaFootage);
+            
             cout << "\nNEW EVIDENCE: You asked the Security Officer to check the security camera and found a suspicious footage, in it " << lavaFootage->getName() << endl << securityToHoof->getDescription() << endl;
         }
         else if (currentStory.getDescription() == penAurora->getDescription())
         {
             penAurora->setHasFound(true);
-            inventory.push_back(penAurora);
+            
             cout << "\nNEW EVIDENCE: You found " << penAurora->getName() << " and saw Mika asked Aurora about it:\n " << mikaToAurora->getDescription() << endl;
         }
         else if (currentStory.getDescription() == insulinPen->getDescription())
         {
             insulinPen->setHasFound(true);
-            inventory.push_back(insulinPen);
+            
             cout << "\nNEW EVIDENCE: You found " << insulinPen->getName() << " and confronted Alex about it:\n " << alexToHoof->getDescription() << endl;
         }
         else if (currentStory.getDescription() == partyPhoto->getDescription())
         {
             partyPhoto->setHasFound(true);
-            inventory.push_back(partyPhoto);
+            
             cout << "\nNEW EVIDENCE: You found " << partyPhoto->getName() << " and asked Clara about it:\n " << claraToHoof->getDescription() << endl;
         }
         else if (currentStory.getDescription() == anonymousNote->getDescription())
         {
             anonymousNote->setHasFound(true);
-            inventory.push_back(anonymousNote);
+            
             cout << "\nNEW EVIDENCE: Alex found " << anonymousNote->getName() << "\n " << alexRead->getDescription() << endl;
         }
         else if (currentStory.getDescription() == teaBagMika->getDescription())
         {
             teaBagMika->setHasFound(true);
-            inventory.push_back(teaBagMika);
+            
             cout << "\nNEW EVIDENCE: You noticed " << teaBagMika->getName() << " and heard Aurora reassured Mika:\n " << mikaToAurora->getDescription() << endl;
         }
         else if (currentStory.getDescription() == whiskeyBottle->getDescription())
         {
             whiskeyBottle->setHasFound(true);
-            inventory.push_back(whiskeyBottle);
+            
             cout << "\nNEW EVIDENCE: You noticed " << whiskeyBottle->getName() << " and eavesdropped Harrison talking to Mika about it:\n " << harrisonToMika->getDescription() << endl;
         }
         else if (currentStory.getDescription() == fingerprintFlute->getDescription())
         {
             fingerprintFlute->setHasFound(true);
-            inventory.push_back(fingerprintFlute);
+            
             cout << "\nNEW EVIDENCE: You found " << fingerprintFlute->getName() << " and confronted Aurora and Mika about it:\n " << auroraToMikaFlute->getDescription() << endl;
         }
         else if (currentStory.getDescription() == investigatePassengers->getDescription() && inventory.size() >= 12)

@@ -163,9 +163,13 @@ void Story::printInventory(const vector<evidence*>& inventory){
 	
 	cout << "The evidence you have collected so far: " << endl;
 	for (size_t i = 0; i < inventory.size(); i++){
+	int counter = 0;
     if(inventory[i]->getHasFound() == true){
-        cout << i + 1 << ". " << inventory[i]->getName() << endl;
+		
+        cout << counter + 1 << ". " << inventory[i]->getName() << endl;
+		
     }
+	counter++;
 }
 
 	cout << "\nPress Enter to continue...";
