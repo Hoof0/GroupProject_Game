@@ -242,7 +242,7 @@ int main() {
     accuseMika->setDescription("Mika looked suspicious. I'd check the syringe pen and torn photo for further investigation.");
     accuseMika->setChoiceses("Review on the syringe pen.", reviewPenOnVictor, 0);
     accuseMika->setChoiceses("Review on the torn photo on Victor's body.", reviewTornPhoto, 0);
-    accuseMika->setChoiceses("Compare evidence.", compareMika, 1);
+    accuseMika->setChoiceses("Compare evidence.", act3Investigation, 1);
 
     accuseMika->setChoiceses("Your inventory have: ", inven, 2);
     reviewPenOnVictor->setDescription("Using the forensic lab kit you brought, you tested the pen, and received a positive result for aconite on the pen's tip, the same poison found on Victor's pillow. But you weren't sure if this was Mika's pen.\n...\nWait. Aurora also had the same pen. She and Mika were both attendants. If all attendants on this flight were given the same pen, then...");
@@ -509,7 +509,7 @@ int main() {
         if (Resolute(inventory))
         {
         cout << "\nYou have chosen to be resolute in your investigation.\n";
-        accuseMika->setChoiceses("Resolute.", compareMika, 0);
+        act3Investigation->setChoiceses("Resolute.", compareMika, 0);
         }
 
         //inventory check
